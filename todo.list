@@ -1,0 +1,18 @@
+To Do List:
+    DONE * Crear un virtual env
+    DONE * Instalar y configurar
+    * Iniciar la database, Super user, test run
+    * Deploy en pythoneverywhere
+    * Crear el Core app para las paginas base
+    * Deploy en pythoneverywhere
+    * Crear el userapp
+    * Crear la app de productos
+    * Lista de productos en la main page
+    * Detalle del producto
+    * Funcion de buscar articulos
+    * Registo y Logeo de Usuarios
+    * Crear una pagina de cuentas
+    * Carrito
+    * Compra por el Carrito
+    * Pago por diversas vias electronicas
+    * Deploy final

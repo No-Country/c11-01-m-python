@@ -36,7 +36,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     image = models.ImageField(upload_to='perfil/', max_length=255, null = True, blank=True)
     is_active = models.BooleanField(default= True)
     is_staff = models.BooleanField(default = False)
-    last_login = models.DateField()
+    last_login = models.DateField(null = True)
     objects = UserManager()
 
     class Meta:
