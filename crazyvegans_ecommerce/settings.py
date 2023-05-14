@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,9 +25,13 @@ SECRET_KEY = 'django-insecure-&jpc)k&*u&5-gx@zg(l*xojto$_w9bgqlqwq)$kyd*22c0*dn0
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+#Para el Deploy
+#DEBUG = False
 
 ALLOWED_HOSTS = []
 
+#Para el Deploy
+#ALLOWED_HOSTS = ['ecruzmetivier.pythonanywhere.com']
 
 # Application definition
 
@@ -44,6 +49,7 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     'apps.users',
+    'apps.core',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY_APPS
@@ -63,7 +69,7 @@ ROOT_URLCONF = 'crazyvegans_ecommerce.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -92,6 +98,19 @@ DATABASES = {
         'PORT': 3306
     }
 }
+
+
+#Para Deploy
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'ecruzmetivier$crazyvegans_db',
+#         'USER': 'ecruzmetivier',
+#         'PASSWORD': 'admin123@',
+#         'HOST': 'ecruzmetivier.mysql.pythonanywhere-services.com',
+#     }
+# }
+
 
 
 # Password validation
@@ -131,6 +150,8 @@ AUTH_USER_MODEL = 'users.User'
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'crazyvegans_ecommerce/static'),)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

@@ -1,7 +1,7 @@
 To Do List:
     DONE * Crear un virtual env
     DONE * Instalar y configurar
-    * Iniciar la database, Super user, test run
+    DONE * Iniciar la database, Super user, test run
     * Deploy en pythoneverywhere
     * Crear el Core app para las paginas base
     * Deploy en pythoneverywhere

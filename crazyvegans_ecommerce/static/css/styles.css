@@ -1,0 +1,121 @@
+
+body {
+    width: 100%;
+    background-color: #f8f9fa;
+    font-family: montserrat;
+    position: relative;
+    padding-bottom: 3em;
+    min-height: 100vh;
+}
+
+/* Inico del nav personalizado*/
+
+/*Para mantener el patron del primer navbar, si se hace un cambio
+en el background color de .primer-navbar, debe hacerse en el custom por igual */
+/*posibles verdes y amarillos
+#68ad02
+#fdcf81 Favorito*/
+.fondo-header{
+    background-color: #fdcf81;
+    width: 100%;
+}
+
+.navbar-custom{
+    background-color: #fdcf81;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.navbar-secundario{
+    margin-left: 20%;
+}
+
+.nav-item-second {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+/*Color del texto del nav-light*/
+.navbar-light .navbar-nav .nav-link {
+    color: #000000;
+    opacity: 0.87;
+  }
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #2e755c;
+}
+
+/*Fin del nav personalizado*/
+
+/*Search Box*/
+.search-bar{
+    width: 100%;
+    max-width: 600px;
+    min-width: 200px;
+    max-height: 50px;
+    background: #fae1b5;
+    display:flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+    margin-left: 12%;
+    margin-right: 3%;
+}
+
+.search-bar input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    max-height: 50px;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 20;
+    color: #000000;
+    opacity: 0.87;
+}
+
+.search-bar button img{
+    width: 25px;
+}
+
+.search-bar button {
+    border: 0;
+    border-radius: 50%;
+    max-height: 50px;
+    width: 60px;
+    height: 60px;
+    background: #fae1b5;
+    cursor: pointer;
+}
+/*Fin del Search box*/
+
+/*Texto de la base page*/
+::placeholder{
+    color:black;
+    opacity: 0.5;
+}
+
+
+h1 {
+    color: #000000;
+    opacity: 0.87;
+}
+/*Fin del texto de la base page*/
+
+.container{
+    width: 100%;
+    margin-top: 2%;
+}
+
+/*Footer  Color: #fdcf81*/
+footer {
+    background-color: #fdcf81;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+footer a {
+    font-size: 12px; 
+}
+/*navbar de prueba*/
