@@ -1,30 +1,25 @@
 {% extends 'core/base.html' %}
 
-{%block title%} <p>Main Page</p> {%endblock%}
+{%block title%} <p>Products</p> {%endblock%}
 {% block content%}
-<p>Main Page</p>
-<p>Main Page</p>
-<p>Main Page</p>
-<p>Main Page</p>
-<p>Main Page</p>
-<p>Main Page</p>
-<p>Main Page</p>
-<p>Main Page</p>
-<p>Main Page</p>
-<p>Main Page</p>
-<p>Main Page</p>
-<p>Main Page</p>
-<p>Main Page</p>
-<p>Main Page</p>
-<p>Main Page</p>
-<p>Main Page</p>
-<p>Main Page</p>
-<p>Main Page</p>
-<p>Main Page</p>
-<p>Main Page</p>
-<p>Main Page</p>
-<p>Main Page</p>
-<p>Main Page</p>
-<p>Main Page</p>
-{%endblock%}
+<div class="container-fluid" style="margin-left: 7%;">
+    <div class="row p-3 pb-2 pt-3">
+        {% for product in products%}
+            <div class="card col-xs-12 col-md-6 col-lg-3" style="width: 18rem; margin: 10px">
+                <img src="{{ product.image_product.url }}" class="card-img-top" style="width: 250px; height: 200px;">
+                <div class="card-body">
+                    <div style="display: flex; flex-direction: row">
+                        <h5 class="card-title">{{ product.name_product }}</h5>            
+                    </div>
+                    <strong class="card-text">{{ product.price_product}}</strong>
+                    <p class="card-text">{{ product.description_product}}</p>                                 
+                </div>             
+                <div class="card-footer text-end" style="background-color:white;">
+                    <a href="#" class="btn btn-primary" style="border-radius: 25px;">Agregar al carrito</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
 
+{%endblock%}

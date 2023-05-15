@@ -1,7 +1,13 @@
 from django.shortcuts import render
 
+from apps.store.models import Product
+
 def mainpage(request):
-    return render(request, 'core/mainpage.html')
+    products = Product.objects.all()[0:6]
+
+    return render(request, 'core/mainpage.html', {
+        'products': products
+    })
 
 def about(request):
     return render(request, 'core/about.html')

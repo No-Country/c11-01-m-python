@@ -48,8 +48,10 @@ THIRD_PARTY_APPS = [
 ]
 
 LOCAL_APPS = [
+    'apps.helper',
     'apps.users',
     'apps.core',
+    'apps.store',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY_APPS
@@ -158,8 +160,6 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'crazyvegans_ecommerce/static'),)
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#URL publica para los archivos media
-MEDIA_URL = '/media/'
+MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')
 
-#Ubicacion del archivo Media
-MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = '/media/'
