@@ -3,8 +3,8 @@ body {
     width: 100%;
     background-color: #f8f9fa;
     font-family: montserrat;
-    position: relative;
-    padding-bottom: 3em;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
 }
 
@@ -111,10 +111,8 @@ h1 {
 /*Footer  Color: #fdcf81*/
 footer {
     background-color: #fdcf81;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding-top: 3em;
+    margin-top: auto;
+    padding-top: 15px;
 }
 footer a {
     font-size: 12px; 
