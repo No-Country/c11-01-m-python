@@ -1,0 +1,93 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+
+  <div class="container py-4" style="margin-left: 20%;">
+    <div class="row g-0 align-items-center">
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <div class="card cascading-right" style="
+            background: hsla(0, 0%, 100%, 0.55);
+            backdrop-filter: blur(30px);
+            ">
+            <div class="d-flex flex-column pb-3">
+				<img class="img-fluid mx-auto d-block pt-3" src="{% static 'images/company/provisional_logo.png' %}" alt="Crazy Vegans Logo" width="150" height="75">
+				</div>
+          <div class="card-body p-3 pt-0 shadow-5 text-center">
+            <h2 class="fw-bold mb-5">Registrate</h2>
+            <form class="form-signin" method="post">{% csrf_token %}
+              <!-- 2 column grid layout with text inputs for the first and last names -->
+              <div class="row">
+                
+                <div class="col-md-6 mb-4">
+                    <!--Nombres -->
+                  <div class="form-outline">
+                    <input type="text" name="firstname" id="inputFirstname" class="form-control" placeholder="Nombres" required>
+                  </div>
+                </div>
+                <!--Apellidos-->
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="text" name="lastname" id="inputLastname" class="form-control" placeholder="Apellidos" required>
+                  </div>
+                </div>
+                <!--Nombre de usuario-->
+                <div class="form-outline mb-4">
+                    <input type="text" name="username" id="inputUsername" class="form-control" placeholder="Nombre de Usuario" required>
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="form-outline mb-4">
+                <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Correo Electronico" required autofocus>
+              </div>
+
+              <!--Telefono-->
+              <div class="form-outline mb-4">
+                <input type="text" name="phone" id="inputdirection" class="form-control" placeholder="Telefono" required>
+              </div>
+
+              <!-- Direccion -->
+              <div class="form-outline mb-4">
+                <input type="text" name="direction" id="inputdirection" class="form-control" placeholder="Direccion" required>
+              </div>
+
+              <!-- Password -->
+              <div class="form-outline mb-4">
+                <input type="password" name="password1" id="inputPassword1" class="form-control" placeholder="Password" required>
+              </div>
+
+              <!-- Confirmacion -->
+              <div class="form-outline mb-4">
+                <input type="password" name="password2" id="inputPassword2" class="form-control" placeholder="Confirmar Password..." required>
+              </div>
+
+                {% for field in registration_form %}
+				<p>
+				{% for error in field.errors %}
+				<p style="color: red">{{ error }}</p>
+				{% endfor %}
+				</p>
+				{% endfor %}
+				{% if registration_form.non_field_errors %}
+				<div style="color: red">
+					<p>{{registration_form.non_field_errors}}</p>
+				</div>
+
+                {% endif %}
+              <!-- Submit button -->
+              <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+
+              <!-- Register buttons -->
+              <div class="text-center">
+                Aqui pondremos el registro de google
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock content %}
