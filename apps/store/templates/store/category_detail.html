@@ -1,14 +1,12 @@
-
 {% extends 'core/base.html' %}
 {% load drop_menu %}
 
-{%block title%} Products {%endblock%}
+{%block title%} Categories {%endblock%}
 {% block content%}
 <div class="container-fluid" style="margin-left: 7%;">
     <div class ="row pb-0 justify-content-end" style="margin-left: 74%;">
         {% drop_menu %}
     </div>
-    
     <div class="row p-3 pb-2 pt-3">
         {% for product in products%}
             <div class="card col-xs-12 col-md-6 col-lg-3" style="width: 18rem; margin: 10px; border-radius: 30px;">
@@ -27,6 +25,4 @@
         {% endfor %}
     </div>
 </div>
-
-{%endblock%}
-
+{% endblock %}

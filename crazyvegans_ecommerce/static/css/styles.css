@@ -118,3 +118,10 @@ footer a {
     font-size: 12px; 
 }
 /*navbar de prueba*/
+
+/*Modificaciones especializadas como drop_menu, etc*/
+
+.dropdown .dropdown-menu {
+    background-color: transparent;
+}
+/*Fin de las modificaciones especializadas*/
