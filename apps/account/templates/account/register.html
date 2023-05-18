@@ -22,7 +22,7 @@
                 <div class="col-md-6 mb-4">
                     <!--Nombres -->
                   <div class="form-outline">
-                    <input type="text" name="firstname" id="inputFirstname" class="form-control" placeholder="Nombres" required>
+                    <input type="text" name="firstname" id="inputFirstname" class="form-control" placeholder="Nombres" required autofocus>
                   </div>
                 </div>
                 <!--Apellidos-->
@@ -63,20 +63,20 @@
               </div>
 
                 {% for field in registration_form %}
-				<p>
-				{% for error in field.errors %}
-				<p style="color: red">{{ error }}</p>
-				{% endfor %}
-				</p>
-				{% endfor %}
-				{% if registration_form.non_field_errors %}
-				<div style="color: red">
-					<p>{{registration_form.non_field_errors}}</p>
-				</div>
+                <p>
+                {% for error in field.errors %}
+                <p style="color: red">{{ error }}</p>
+                {% endfor %}
+                </p>
+                {% endfor %}
+                {% if registration_form.non_field_errors %}
+                <div style="color: red">
+                  <p>{{registration_form.non_field_errors}}</p>
+                </div>
 
                 {% endif %}
               <!-- Submit button -->
-              <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+              <button class="btn call-to-action btn-users" type="submit">Register</button>
 
               <!-- Register buttons -->
               <div class="text-center">

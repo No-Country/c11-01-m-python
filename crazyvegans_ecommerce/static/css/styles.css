@@ -22,8 +22,6 @@ en el background color de .primer-navbar, debe hacerse en el custom por igual */
 
 .navbar-custom{
     background-color: #fdcf81;
-    margin-left: 5%;
-    margin-right: 5%;
 }
 
 .navbar-secundario{
@@ -150,4 +148,25 @@ footer a {
   border-top-right-radius: 0;
 }
 
-/**/
+/*Fin de los formularios personalizados*/
+
+/* Call to actions y botones */
+.call-to-action {
+    background-color: #016944;
+    color:white;
+    font-size: 15px;
+    
+}
+.call-to-action:hover{
+    background-color: #F08F20;
+    color:white;
+    font-size:15px;
+}
+.btn-users{
+    width: 250px;
+    font-size: 25px;
+}
+.btn-main-menu{
+    font-size: 18px;
+}
+/* Fin de Call to Actions y botones */

@@ -33,6 +33,9 @@ ALLOWED_HOSTS = []
 #Para el Deploy
 #ALLOWED_HOSTS = ['ecruzmetivier.pythonanywhere.com']
 
+if DEBUG:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' #
+
 # Application definition
 
 DJANGO_APPS = [

@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,56 +12,132 @@
 
   </head>
   <body>
-    <!--Header con flex box-->
-    <div class="container-fluid fondo-header">
-      <div class="d-flex justify-content-around pb-1">
-        <div class="p-2">
-          <a href="/"><img src="{% static "images/company/provisional_logo.png" %}" width="120" height="45"></a>
-        </div>
 
-        <div class="p-2" style="width: 600px; margin:auto;">
-          <form action="" class="search-bar">
-            <input type="text" placeholder="Busca lo que quieras" name="search">
-            <button type="submit"><img src="{% static "images/icons/search.png" %}" width="25" height="25">
-            </button>
-          </form>
-        </div>
-        <div class="pt-3">
-            <img src="{% static "images/icons/user.png" %}" width="25" height="25">
-          </a>
-        </div>
-        <div class="pt-3">
-          <a href="#"><img src="{% static "images/icons/shopping_cart.png" %}" width="25" height="25"></a>
-        </div>
-      </div>
-    </div>
-    <!--Fin header con flex box-->
-    
-    <!--Inicio del navbar-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse"  style="margin-left:20%;">
-              <div class="navbar-nav">
-                  <a href="/" class="nav-item nav-link nav-item-second">Productos</a>
-                  <a href="#" class="nav-item nav-link nav-item-second">Ofertas</a>
-                  <a href="/about" class="nav-item nav-link nav-item-second">Sobre Nosotros</a>
-                  <a href="/info" class="nav-item nav-link nav-item-second">Dónde Estamos</a>
+<!-- Header -->
+<div class="d-flex flex-column flex-lg-row p-3 px-md-4 mb-3 border-bottom shadow-sm navbar-custom">
+
+	<!-- MEDIUM+ SCREENS -->
+	<div class="d-none d-md-flex flex-row my-auto flex-grow-1 align-items-center">
+		<h5 class="mr-3 font-weight-normal justify-content-start">
+			<a class="p-2 text-dark" href="/"><img src="{% static "images/company/provisional_logo.png" %}" width="120" height="45"></a>
+		</h5>
+		<form action="" class="search-bar">
+      <input type="text" placeholder="Busca lo que quieras" name="search">
+      <button type="submit"><img src="{% static "images/icons/search.png" %}" width="25" height="25">
+      </button>
+    </form>
+
+		<div class="d-flex flex-row-reverse flex-grow-1">
+			<nav class="">
+				{% if request.user.is_authenticated %}
+					<div class="dropdown dropleft show p-2">
+						<div class="d-flex flex-row">
+
+							<div class="btn-group dropleft">
+                <img class="account-image rounded-circle m-auto d-block dropdown-toggle" id="id_shopping_links" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="{% static "images/icons/shopping_cart.png" %}" alt="Carrito" width="25" height="25">
+                <div class="dropdown-menu" aria-labelledby="id_shopping_links">
+                  <a class="dropdown-item" href="#">FUTUROS ITEMS</a>
+                </div>
               </div>
+
+							<div class="btn-group dropleft">
+								<img class="account-image rounded-circle m-auto d-block dropdown-toggle" id="id_profile_links" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="{% static "images/icons/user.png" %}" alt="Usuarios" width="25" height="25">
+								<div class="dropdown-menu" aria-labelledby="id_profile_links">
+									<a class="dropdown-item" href="#">Account</a>
+									<a class="dropdown-item" href="/account/logout">Logout</a>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				{% else %}
+					<a class="p-2 text-dark" href="/account/login">Login</a>
+					<a class="p-2 text-dark" href="/account/register">Register</a>
+          <div class="btn-group dropleft">
+            <img class="account-image rounded-circle m-auto d-block dropdown-toggle" id="id_shopping_links" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="{% static "images/icons/shopping_cart.png" %}" alt="Carrito" width="25" height="25">
+            <div class="dropdown-menu" aria-labelledby="id_shopping_links">
+              <a class="dropdown-item" href="#">FUTUROS ITEMS</a>
+            </div>
+          </div>
+				{% endif %}	
+ 
+			</nav>
+		</div>
+	</div>
+	<!-- END MEDIUM+ SCREENS -->
+
+	<!-- SMALL SCREENS -->
+	<div class="d-flex d-md-none flex-column my-auto align-items-center">
+		<h5 class="font-weight-normal">
+		<a class="p-2 text-dark" href="/"><img src="{% static "images/company/provisional_logo.png" %}" width="120" height="45"></a>
+		</h5>
+		<form action="" class="search-bar">
+      <input type="text" placeholder="Busca lo que quieras" name="search">
+      <button type="submit"><img src="{% static "images/icons/search.png" %}" width="25" height="25">
+      </button>
+    </form>
+		<div class="d-flex flex-row-reverse flex-grow-1">
+			<nav class="">
+				{% if request.user.is_authenticated %}
+				<div class="dropdown dropleft p-2 mt-2">
+					<div class="d-flex flex-row">
+
+            <div class="btn-group dropleft" style="padding-right: 15%;">
+              <img class="account-image rounded-circle m-auto d-block dropdown-toggle" id="id_shopping_links" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="{% static "images/icons/shopping_cart.png" %}" alt="Carrito" width="25" height="25">
+              <div class="dropdown-menu" aria-labelledby="id_shopping_links">
+                <a class="dropdown-item" href="#">FUTUROS ITEMS</a>
+              </div>
+            </div>
+
+						<div class="btn-group dropleft">
+							<img class="account-image rounded-circle m-auto d-block dropdown-toggle" id="id_profile_links" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="{% static "images/icons/user.png" %}" alt="Usuarios" width="25" height="25">
+							<div class="dropdown-menu" aria-labelledby="id_profile_links">
+								<a class="dropdown-item" href="#">Account</a>
+								<a class="dropdown-item" href="/account/logout">Logout</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				{% else %}
+					<a class="p-2 text-dark" href="#">Login</a>
+					<a class="p-2 text-dark m-2" href="/acount/register">Register</a>
+          <div class="btn-group dropleft">
+            <img class="account-image rounded-circle m-auto d-block dropdown-toggle" id="id_shopping_links" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="{% static "images/icons/shopping_cart.png" %}" alt="Carrito" width="25" height="25">
+            <div class="dropdown-menu" aria-labelledby="id_shopping_links">
+              <a class="dropdown-item" href="#">FUTUROS ITEMS</a>
+            </div>
+          </div>
+				{% endif %}	
+			</nav>
+	  	</div>
+	</div>
+	<!-- END SMALL SCREENS -->
+</div>
+ <!--Inicio del navbar-->
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+      <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse"  style="margin-left:20%;">
+          <div class="navbar-nav" style="font-size:20px;">
+              <a href="/" class="nav-item nav-link nav-item-second">Productos</a>
+              <a href="#" class="nav-item nav-link nav-item-second">Ofertas</a>
+              <a href="/about" class="nav-item nav-link nav-item-second">Sobre Nosotros</a>
+              <a href="/info" class="nav-item nav-link nav-item-second">Dónde Estamos</a>
           </div>
       </div>
-  </nav>
-    <!--Fin del navbar-->
+  </div>
+</nav>
+<!--Fin del navbar-->
     <!--Contenido que llenara el body-->
-      <div class="container">
-        {% block content %}
-        {% endblock %}
-      </div>
-    <!--Fin del contenido que llenara el Body-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-  </body>
-  {% include "core/footer.html" %}
+    <div class="container">
+      {% block content %}
+      {% endblock %}
+    </div>
+  <!--Fin del contenido que llenara el Body-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+{% include "core/footer.html" %}
 
 </html>
