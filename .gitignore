@@ -281,5 +281,5 @@ pyrightconfig.json
 # Ignore all local history of files
 .history
 .ionide
-
+todo.list.txt
 # End of https://www.toptal.com/developers/gitign

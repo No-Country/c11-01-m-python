@@ -4,14 +4,14 @@ To Do List:
     DONE * Iniciar la database, Super user, test run
     DONE * Deploy en pythoneverywhere
     DONE * Crear el Core app para las paginas base
-    * Deploy en pythoneverywhere
+    DONE * Deploy en pythoneverywhere
     DONE * Crear el userapp
     DONE * Crear la app de productos
     DONE * Lista de productos en la main page
     DONE * Detalle del producto
     DONE * Vista de categoria
     * Funcion de buscar articulos
-    * Registo y Logeo de Usuarios
+    DONE * Registo y Logeo de Usuarios
     * Crear una pagina de cuentas
     * Carrito
     * Compra por el Carrito
