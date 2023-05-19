@@ -2,9 +2,9 @@ from django.shortcuts import render, get_object_or_404, redirect
 from apps.store.models import Product, Category
 from apps.store.cart import Cart
 #Carrito
-def add_to_cart(request, product_id):
+def add_to_cart(request, product_id, quantity):
     cart = Cart(request)
-    cart.add(product_id)  
+    cart.add(product_id, quantity)  
     return redirect('/')
 
 def remove_from_cart(request, product_id):
