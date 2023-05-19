@@ -1,0 +1,41 @@
+{% load static %}
+
+  {% for item in cart %}
+  <div class="row align-items-center border-bottom" style="height:150x; width:450px">
+    <!--Imagen -->
+    <div class="col">
+      <img src="{{ item.product.image_product.url }}" class="" style="width: 75px;">
+    </div>
+    <!--Titulo, Precio y Cantidad-->
+    <div class="col-6">
+      <div class="row">
+        <span class ="col-8">
+          {{ item.product.name_product}}
+        </span>
+        <span class ="col">
+          Cant:
+          <strong>{{ item.quantity }}</strong>
+        </span>
+        <span class ="col">
+          <span class="text-muted">${{ item.product.price_product}}</span>
+        </span>
+      </div>
+    </div>
+    <!-- Botones -->
+    <div class="col">
+      <div class="row" style="margin:3px;">
+        <a class ="col-md-6 col-lg-3 col-xl-3  " href="{% url 'change_quantity' item.product.id_product %}?action=increase">
+            <img class="account-image rounded-circle m-auto d-block dropdown-toggle" aria-haspopup="true" aria-expanded="false" src="{% static "images/icons/plus.png" %}" alt="Usuarios" width="25" height="25">
+        </a>
+        <a class ="col-md-6 col-lg-3 col-xl-3 "  href="{% url 'change_quantity' item.product.id_product %}?action=decrease">
+            <img class="account-image rounded-circle m-auto d-block dropdown-toggle" aria-haspopup="true" aria-expanded="false" src="{% static "images/icons/minus.png" %}" alt="Usuarios" width="25" height="25">
+        </a>
+        <a class ="col-md-6 col-lg-3 col-xl-3 " href="{% url 'remove_from_cart' item.product.id_product %}">
+            <img class="account-image rounded-circle m-auto d-block dropdown-toggle" aria-haspopup="true" aria-expanded="false" src="{% static "images/icons/trash.png" %}" alt="Usuarios" width="25" height="25">
+        </a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+  <div>
+  </div>

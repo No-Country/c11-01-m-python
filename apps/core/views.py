@@ -1,12 +1,15 @@
 from django.shortcuts import render
 
 from apps.store.models import Product
+from apps.store.cart import Cart
 
 def mainpage(request):
     products = Product.objects.all()[0:6]
+    cart = Cart(request)
 
     return render(request, 'core/mainpage.html', {
-        'products': products
+        'products': products,
+        'cart' : cart
     })
 
 def about(request):

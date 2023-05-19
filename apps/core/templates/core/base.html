@@ -12,7 +12,6 @@
 
   </head>
   <body>
-
 <!-- Header -->
 <div class="d-flex flex-column flex-lg-row p-3 px-md-4 mb-3 border-bottom shadow-sm navbar-custom">
 
@@ -21,25 +20,23 @@
 		<h5 class="mr-3 font-weight-normal justify-content-start">
 			<a class="p-2 text-dark" href="/"><img src="{% static "images/company/provisional_logo.png" %}" width="120" height="45"></a>
 		</h5>
-		<form action="" class="search-bar">
-      <input type="text" placeholder="Busca lo que quieras" name="search">
-      <button type="submit"><img src="{% static "images/icons/search.png" %}" width="25" height="25">
-      </button>
-    </form>
+		<form action="/search/" class="search-bar" method="get"> 
+			<input type="search" placeholder="Busca lo que quieras" name="query" id="id_q_large" >
+			<button type="submit"><img src="{% static "images/icons/search.png" %}" width="25" height="25">
+			</button>
+    	</form>
 
 		<div class="d-flex flex-row-reverse flex-grow-1">
 			<nav class="">
 				{% if request.user.is_authenticated %}
 					<div class="dropdown dropleft show p-2">
 						<div class="d-flex flex-row">
-
 							<div class="btn-group dropleft">
                 <img class="account-image rounded-circle m-auto d-block dropdown-toggle" id="id_shopping_links" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="{% static "images/icons/shopping_cart.png" %}" alt="Carrito" width="25" height="25">
                 <div class="dropdown-menu" aria-labelledby="id_shopping_links">
-                  <a class="dropdown-item" href="#">FUTUROS ITEMS</a>
+					{% include "core/cart_view.html" %}
                 </div>
               </div>
-
 							<div class="btn-group dropleft">
 								<img class="account-image rounded-circle m-auto d-block dropdown-toggle" id="id_profile_links" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="{% static "images/icons/user.png" %}" alt="Usuarios" width="25" height="25">
 								<div class="dropdown-menu" aria-labelledby="id_profile_links">
@@ -56,7 +53,7 @@
           <div class="btn-group dropleft">
             <img class="account-image rounded-circle m-auto d-block dropdown-toggle" id="id_shopping_links" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="{% static "images/icons/shopping_cart.png" %}" alt="Carrito" width="25" height="25">
             <div class="dropdown-menu" aria-labelledby="id_shopping_links">
-              <a class="dropdown-item" href="#">FUTUROS ITEMS</a>
+				{% include "core/cart_view.html" %}
             </div>
           </div>
 				{% endif %}	
@@ -71,8 +68,8 @@
 		<h5 class="font-weight-normal">
 		<a class="p-2 text-dark" href="/"><img src="{% static "images/company/provisional_logo.png" %}" width="120" height="45"></a>
 		</h5>
-		<form action="" class="search-bar">
-      <input type="text" placeholder="Busca lo que quieras" name="search">
+		<form action="/search/" class="search-bar" method="get">
+      <input type="search" placeholder="Busca lo que quieras" name="query" id="id_q_small">
       <button type="submit"><img src="{% static "images/icons/search.png" %}" width="25" height="25">
       </button>
     </form>
@@ -85,7 +82,7 @@
             <div class="btn-group dropleft" style="padding-right: 15%;">
               <img class="account-image rounded-circle m-auto d-block dropdown-toggle" id="id_shopping_links" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="{% static "images/icons/shopping_cart.png" %}" alt="Carrito" width="25" height="25">
               <div class="dropdown-menu" aria-labelledby="id_shopping_links">
-                <a class="dropdown-item" href="#">FUTUROS ITEMS</a>
+                {% include "core/cart_view.html" %}
               </div>
             </div>
 
@@ -104,7 +101,7 @@
           <div class="btn-group dropleft">
             <img class="account-image rounded-circle m-auto d-block dropdown-toggle" id="id_shopping_links" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="{% static "images/icons/shopping_cart.png" %}" alt="Carrito" width="25" height="25">
             <div class="dropdown-menu" aria-labelledby="id_shopping_links">
-              <a class="dropdown-item" href="#">FUTUROS ITEMS</a>
+				{% include "core/cart_view.html" %}
             </div>
           </div>
 				{% endif %}	

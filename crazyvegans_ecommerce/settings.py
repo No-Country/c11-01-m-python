@@ -36,6 +36,12 @@ ALLOWED_HOSTS = []
 if DEBUG:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' #
 
+#Variables de Session
+#Tiempo de la variable de session
+CART_SESSION_ID = 'cart'
+SESSION_COOKIE_AGE = 86400
+#Fin de variables de session
+
 # Application definition
 
 DJANGO_APPS = [

@@ -10,10 +10,18 @@ To Do List:
     DONE * Lista de productos en la main page
     DONE * Detalle del producto
     DONE * Vista de categoria
-    * Funcion de buscar articulos
     DONE * Registo y Logeo de Usuarios
+    ---------------------------------------------
+    DONE * Funcion de buscar articulos
+    DONE * Agregar al Carrito
+    DONE * Incrementar articulos del carrito
+    DONE * Desincrementar articulos del carrito
+    * Actualizar items en el carrito
+    DONE * Eliminar objetos del carrito
+    * Limpiar carrito
+    * Pagina de cuentas
+    * Ver productos del carrito
     * Crear una pagina de cuentas
-    * Carrito
     * Compra por el Carrito
     * Pago por diversas vias electronicas
     * Deploy final

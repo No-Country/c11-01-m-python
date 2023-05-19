@@ -4,6 +4,7 @@
 
 {%block title%} Products {%endblock%}
 {% block content%}
+<h1 class="text-2xl">Productos</h1>
 <div class="container-fluid" style="margin-left: 7%;">
     <div class ="row pb-0 justify-content-end" style="margin-left: 74%;">
         {% drop_menu %}
@@ -21,7 +22,7 @@
                     <p class="card-text">{{ product.description_product}}</p>                                 
                 </div>             
                 <div class="card-footer text-end" style="background-color:white;">
-                    <a href="#" class="btn btn-primary rounded call-to-action btn-main-menu"> Agregar al carrito</a>
+                    <a href="{% url 'add_to_cart' product.id_product %}" class="btn btn-primary rounded call-to-action btn-main-menu"> Agregar al carrito</a>
                 </div>
             </div>
         {% endfor %}
