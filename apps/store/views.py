@@ -45,15 +45,16 @@ def cart_view(request):
 @login_required
 def checkout(request):
     cart = Cart(request)
-    
-    if request.method=='POST':
-        form = OrderForm(request.POST)
-        if form.is_valid():
 
-            #Revisamos los items
+    if request.method == 'POST':
+        form = OrderForm(request.POST)
+
+        if form.is_valid():
+            total_price = 0
+
             for item in cart:
                 product = item['product']
-                total_price += product.price * int(item['quantity'])
+                total_price += product.price_product * int(item['quantity'])
 
             order = form.save(commit=False)
             order.created_by = request.user
@@ -63,18 +64,19 @@ def checkout(request):
             for item in cart:
                 product = item['product']
                 quantity = int(item['quantity'])
-                price = product.price * quantity
-                item = OrderItem.objects.create(order =order, product=product, price=price, quantity=quantity)
+                price = product.price_product * quantity
+
+                item = OrderItem.objects.create(order=order, product=product, price=price, quantity=quantity)
 
             cart.clear()
-            #Aqui debe redireccionar a la pagina de gracias
-            return redirect('/')
+
+            return redirect('/store/invoice.html')
     else:
         form = OrderForm()
 
     return render(request, 'store/checkout.html', {
-        'cart' : cart,
-        'form' : form
+        'cart': cart,
+        'form': form,
     })
 
 #fin del carrito
@@ -100,3 +102,6 @@ def search(request):
         'products': products
     })
 
+#Ventana de Gracias
+def invoice(request, id):
+    return render(request, 'store/invoice.html')

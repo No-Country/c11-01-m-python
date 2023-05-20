@@ -79,44 +79,16 @@ def get_redirect_if_exists(request):
 
 #Pagina del usuario
 def account_view(request, *args, **kwargs):
-	# user_id = kwargs.get('user_id')
-	# account = Account.objects.get(pk = user_id)
-	# user = request.user
-	# if user.is_authenticated and user != account:
-	# 	return redirect('/')
-	# elif not user.is_authenticated:
-	# 	return redirect('/account/login')
-	# return render(request, 'account/account.html', {
-	# 	'account': account
-	# })
-
-	context = {}
 	user_id = kwargs.get('user_id')
-	try:
-		account = Account.objects.get(pk = user_id)
-	except Account.DoesNotExist:
-		return HttpResponse('El usuario no existe.')
-	if account:
-		context['id'] = account.id
-		context['email'] = account.email
-		context['firstname'] = account.firstname
-		context['lastname'] = account.lastname
-		context['direction'] = account.direction
-		context['phone'] = account.phone
-		context['hide_email'] = account.hide_email
+	account = Account.objects.get(pk = user_id)
+	user = request.user
+	if user.is_authenticated and user != account:
+		return redirect('/')
+	elif not user.is_authenticated:
+		return redirect('/account/login')
+	return render(request, 'account/account.html', {
+		'account': account
+	})
 
-		#Revisaremos si estas en tu perfil o en el perfil de otra persona
-		is_self = True
-		user = request.user
-		#Veremos si esta logeado, pero no es la misma persona
-		if user.is_authenticated and user != account:
-			return redirect('/')
-		elif not user.is_authenticated:
-			return redirect('/account/login')
-		
-		context['is_self'] = is_self
-		context['BASE_URL'] = settings.BASE_URL
-		return render(request, 'account/account.html', {
-			'account' : context
-		})
+
 	

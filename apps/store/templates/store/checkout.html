@@ -2,9 +2,109 @@
 {% load static %}
 
 {% block content %}
-<form action="." method="post">
-  {% csrf_token %}
-  {{ form }}
-  <input type="submit" value="Submit">
+{% comment %} Aqui comienza el experimental {% endcomment %}
+<form method="post" action="."> {% csrf_token %}
+  <div class="d-flex justify-content-between align-items-center mb-5">
+    <div class="d-flex flex-row align-items-center">
+      <h3 class="mt-1 text-2xl">Checkout</h3>
+    </div>
+    <a href="/" class="text-black"><img src="{% static 'images/icons/back.png' %}" width="25" height="25">Volver</a>
+  </div>
+
+  <div class="row">
+    <div class="col-md-7 col-lg-7 col-xl-6 mb-4 mb-md-0">
+      <div class="p-2 d-flex align-items-center border-bottom" style="background-color: #eee;">
+        <input type="radio" id="id_mercado_pago", name="paid_method", value="Mercado Pago" class="form-check-input m-1">
+          <label for="mercado_pago" class="form-check-label"> Mercado Pago <img src="{% static 'images/icons/mercado_pago.png' %}" width="25" height="25"></label>
+      </div>
+      <div class="p-2 d-flex align-items-center border-top" style="background-color: #eee;">
+          <input type="radio" id="transferencia", name="paid_method", value="Transferencia" class="form-check-input m-1">
+          <label for="transferencia" class="form-check-label"> Transferencia Bancaria </label>
+      </div>
+      <div class="p-2 d-flex align-items-center" style="background-color: #eee;">
+        <input id="id_paid_account" type="text" name="paid_account" maxlength="255" class="form-control" placeholder="Numero de Cuenta...">
+    </div>
+      <div>
+        <div class="d-flex justify-content-between">
+          <div class="d-flex flex-row mt-1">
+            <h3>Verifique sus datos</h3>
+          </div>
+          <div class="d-flex flex-row align-items-center text-primary">
+          </div>
+        </div>
+        <div class="p-2 d-flex align-items-center">
+        <input id="id_first_name" type="text" name="first_name" maxlength="255" required="" class="form-control" value="{{user.firstname}}" readonly>
+        <input id="id_last_name" type="text" name="last_name" maxlength="255" required="" class="form-control" value="{{user.lastname}}" readonly>
+        </div>   
+        <div class="p-2 d-flex align-items-center">
+          <textarea id="id_address" type="text" name="address" maxlength="255" required="" class="form-control" readonly>{{user.direction}}</textarea>
+        </div>
+        <hr />
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="d-flex flex-row mt-1">
+            <h3>Ticket de regalo</h3>
+          </div>
+        </div>
+        <div class="p-2 d-flex align-items-center">
+          <input id="id_receiver" type="text" name="receiver" maxlength="255" class="form-control" placeholder="Nombres y Apellidos">    
+        </div>  
+        <div class="p-2 d-flex align-items-center">
+          <textarea id="id_receiver_address" type="text" name="receiver_address" maxlength="255" class="form-control" placeholder="Direccion"></textarea>
+        </div>
+        <hr />
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="d-flex flex-row mt-1">
+            <h3>Carrito</h3>
+          </div>
+        </div>        
+          {% for item in cart %}
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="row">
+              <div class="col-2">
+            <img src="{{ item.product.image_product.url }}" class="m-2" style="width: 75px;">
+              </div>
+            <div class="col m-2">
+              <span class="m-2 align-items-center">{{ item.product.name_product}} </span>
+            </div>
+            <div class="col m-2">
+            <span class="text-muted m-2 align-items-center">${{ item.product.price_product}}</span> 
+            Cant: <strong>{{ item.quantity }}</strong>
+            </div>
+          </div>
+        </div>
+        {% endfor %} 
+      </div>
+        <!--Esto debera ser borrado con cuidado-->         
+    </div>
+    <!--Columna de la derecha-->
+    <div class="col-md-5 col-lg-4 col-xl-4 offset-lg-1 offset-xl-2">
+      <div class="p-3" style="background-color: #eee;">
+        <span class="fw-bold">Orden</span>
+        <div class="d-flex justify-content-between mt-2">
+          <span>Sub-Total:</span> <span>${{ cart.get_total_cost}}</span>
+        </div>
+        <div class="d-flex justify-content-between mt-2">
+          <span>Envio gratis:</span> <span>$0.0</span>
+        </div>                
+        <hr />
+        <div class="d-flex justify-content-between mt-2">
+          <span class="fw-bold">Total: </span> <span class="text-success">${{ cart.get_total_cost}}</span>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-lg call-to-action align-items-center" style="font-size: 20px; width:100%;">Confirmacion y Pago</button>
+    </div>
+  </div>
+  {% for field in form %}
+        <p>
+            {% for error in field.errors %}
+                <p style="color: red">{{ error }}</p>
+            {% endfor %}
+        </p>
+    {% endfor %}
+        {% if form.non_field_errors %}
+            <div style="color: red">
+                <p>{{form.non_field_errors}}</p>
+            </div>
+        {% endif %}
 </form>
 {% endblock %}

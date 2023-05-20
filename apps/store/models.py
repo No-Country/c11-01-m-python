@@ -51,6 +51,7 @@ class Order(models.Model):
     paid_amount = models.DecimalField(max_digits=12, decimal_places=2, blank=True, null=True)
     is_paid = models.BooleanField(default=False)
     paid_method = models.CharField(max_length=255, null=True)
+    paid_account = models.CharField(max_length=255, blank=True, null=True)
     merchant_id = models.CharField(max_length= 500)
     created_by = models.ForeignKey(Account, related_name='orders', on_delete=models.SET_NULL, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
