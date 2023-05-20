@@ -30,12 +30,17 @@
         <a class ="col-md-6 col-lg-3 col-xl-3 "  href="{% url 'change_quantity' item.product.id_product %}?action=decrease">
             <img class="account-image rounded-circle m-auto d-block dropdown-toggle" aria-haspopup="true" aria-expanded="false" src="{% static "images/icons/minus.png" %}" alt="Usuarios" width="25" height="25">
         </a>
-        <a class ="col-md-6 col-lg-3 col-xl-3 " href="{% url 'remove_from_cart' item.product.id_product %}">
-            <img class="account-image rounded-circle m-auto d-block dropdown-toggle" aria-haspopup="true" aria-expanded="false" src="{% static "images/icons/trash.png" %}" alt="Usuarios" width="25" height="25">
-        </a>
       </div>
     </div>
   </div>
   {% endfor %}
+  <div class = "row align-items-center">
+    <div class = "col-8 p-3">
+      <a>Costo total: <strong>{{ cart.get_total_cost  }}</strong></a>
+    </div>
+    <div class = "col pl-5">
+      <a href="/store/checkout/" class="btn call-to-action">Checkout</a>
+    </div>
+  </div>
   <div>
   </div>

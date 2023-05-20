@@ -1,10 +1,23 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from apps.store.models import Product, Category
+from apps.store.models import Product, Category, Order, OrderItem
 from apps.store.cart import Cart
+from apps.store.forms import OrderForm
+from apps.account.models import Account
+
+#Decoradores
+from django.contrib.auth.decorators import login_required
 #Carrito
 def add_to_cart(request, product_id, quantity):
     cart = Cart(request)
     cart.add(product_id, quantity)  
+    return redirect('/')
+
+#Agregar cantidad variable en el detalle 
+def add_quantity(request, product_id):
+    query = int(request.GET.get('query', ''))
+    cart = Cart(request)
+    quantity = int(query)
+    cart.add(product_id, quantity)
     return redirect('/')
 
 def remove_from_cart(request, product_id):
@@ -28,6 +41,42 @@ def cart_view(request):
     return render(request, 'store/cart_view.html', {
         'cart': cart
     })
+
+@login_required
+def checkout(request):
+    cart = Cart(request)
+    
+    if request.method=='POST':
+        form = OrderForm(request.POST)
+        if form.is_valid():
+
+            #Revisamos los items
+            for item in cart:
+                product = item['product']
+                total_price += product.price * int(item['quantity'])
+
+            order = form.save(commit=False)
+            order.created_by = request.user
+            order.paid_amount = total_price
+            order.save()
+
+            for item in cart:
+                product = item['product']
+                quantity = int(item['quantity'])
+                price = product.price * quantity
+                item = OrderItem.objects.create(order =order, product=product, price=price, quantity=quantity)
+
+            cart.clear()
+            #Aqui debe redireccionar a la pagina de gracias
+            return redirect('/')
+    else:
+        form = OrderForm()
+
+    return render(request, 'store/checkout.html', {
+        'cart' : cart,
+        'form' : form
+    })
+
 #fin del carrito
 def category_detail(request, slug):
     category = get_object_or_404(Category, slug = slug)

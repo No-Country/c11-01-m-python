@@ -45,6 +45,10 @@ class Cart(object):
             self.cart.pop(str(product_id))
             self.save()
 
+    def clear(self):
+        del self.session[settings.CART_SESSION_ID]
+        self.session.modified = True
+
     def get_total_cost(self):
         for p in self.cart.keys():
             self.cart[str(p)]['product'] = Product.objects.get(pk=p)

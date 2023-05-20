@@ -42,6 +42,11 @@ CART_SESSION_ID = 'cart'
 SESSION_COOKIE_AGE = 86400
 #Fin de variables de session
 
+#Redireccion de login
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'account'
+LOGOUT_REDIRECT_URL = '/'
+#Fin de Redireccion de login
 # Application definition
 
 DJANGO_APPS = [
@@ -88,6 +93,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'apps.store.context_processors.cart',
             ],
         },
     },
@@ -172,3 +178,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')
 
 MEDIA_URL = '/media/'
+
+BASE_URL = "http://127.0.0.1:8000"

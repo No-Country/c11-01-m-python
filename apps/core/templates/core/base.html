@@ -33,6 +33,7 @@
 						<div class="d-flex flex-row">
 							<div class="btn-group dropleft">
                 <img class="account-image rounded-circle m-auto d-block dropdown-toggle" id="id_shopping_links" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="{% static "images/icons/shopping_cart.png" %}" alt="Carrito" width="25" height="25">
+				<span class="badge" style="padding-right: 25px; color: #016944;">{{ cart | length}}</span>
                 <div class="dropdown-menu" aria-labelledby="id_shopping_links">
 					{% include "core/cart_view.html" %}
                 </div>
@@ -40,7 +41,7 @@
 							<div class="btn-group dropleft">
 								<img class="account-image rounded-circle m-auto d-block dropdown-toggle" id="id_profile_links" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="{% static "images/icons/user.png" %}" alt="Usuarios" width="25" height="25">
 								<div class="dropdown-menu" aria-labelledby="id_profile_links">
-									<a class="dropdown-item" href="#">Account</a>
+									<a class="dropdown-item" href="{% url 'account' user_id=request.user.id %}">Account</a>
 									<a class="dropdown-item" href="/account/logout">Logout</a>
 								</div>
 							</div>
@@ -52,7 +53,8 @@
 					<a class="p-2 text-dark" href="/account/register">Register</a>
           <div class="btn-group dropleft">
             <img class="account-image rounded-circle m-auto d-block dropdown-toggle" id="id_shopping_links" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="{% static "images/icons/shopping_cart.png" %}" alt="Carrito" width="25" height="25">
-            <div class="dropdown-menu" aria-labelledby="id_shopping_links">
+            <span class="badge" style="padding-right: 25px; color: #016944;">{{ cart | length}}</span>
+			<div class="dropdown-menu" aria-labelledby="id_shopping_links">
 				{% include "core/cart_view.html" %}
             </div>
           </div>
@@ -81,7 +83,8 @@
 
             <div class="btn-group dropleft" style="padding-right: 15%;">
               <img class="account-image rounded-circle m-auto d-block dropdown-toggle" id="id_shopping_links" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="{% static "images/icons/shopping_cart.png" %}" alt="Carrito" width="25" height="25">
-              <div class="dropdown-menu" aria-labelledby="id_shopping_links">
+			  <span class="badge" style="padding-right: 25px; color: #016944;">{{ cart | length}}</span> 
+			  <div class="dropdown-menu" aria-labelledby="id_shopping_links">
                 {% include "core/cart_view.html" %}
               </div>
             </div>
@@ -89,14 +92,14 @@
 						<div class="btn-group dropleft">
 							<img class="account-image rounded-circle m-auto d-block dropdown-toggle" id="id_profile_links" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="{% static "images/icons/user.png" %}" alt="Usuarios" width="25" height="25">
 							<div class="dropdown-menu" aria-labelledby="id_profile_links">
-								<a class="dropdown-item" href="#">Account</a>
+								<a class="dropdown-item" href="{% url 'account' user_id=request.user.id %}">Account</a>
 								<a class="dropdown-item" href="/account/logout">Logout</a>
 							</div>
 						</div>
 					</div>
 				</div>
 				{% else %}
-					<a class="p-2 text-dark" href="#">Login</a>
+					<a class="p-2 text-dark" href="/account/login">Login</a>
 					<a class="p-2 text-dark m-2" href="/acount/register">Register</a>
           <div class="btn-group dropleft">
             <img class="account-image rounded-circle m-auto d-block dropdown-toggle" id="id_shopping_links" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="{% static "images/icons/shopping_cart.png" %}" alt="Carrito" width="25" height="25">

@@ -1,4 +1,3 @@
-
 body {
     width: 100%;
     background-color: #f8f9fa;
@@ -115,12 +114,15 @@ footer {
 footer a {
     font-size: 12px; 
 }
+.footer-class {
+    max-height: 200px;
+}
 /*navbar de prueba*/
 
 /*Modificaciones especializadas como drop_menu, etc*/
-
-.dropdown .dropdown-menu {
+.input-transparent{
     background-color: transparent;
+    border:none;
 }
 /*Fin de las modificaciones especializadas*/
 
@@ -153,14 +155,11 @@ footer a {
 /* Call to actions y botones */
 .call-to-action {
     background-color: #016944;
-    color:white;
-    font-size: 15px;
-    
+    color:white;   
 }
 .call-to-action:hover{
     background-color: #F08F20;
     color:white;
-    font-size:15px;
 }
 
 /* Fin de Call to Actions y botones */

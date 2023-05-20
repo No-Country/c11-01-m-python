@@ -22,12 +22,12 @@
                         <p class="card-text">{{ product.description_product}}</p>                                 
                     </div>             
                     <div class="card-footer text-end" style="background-color:white;">
-                        <a href="#" class="btn btn-primary rounded call-to-action btn-main-menu"> Agregar al carrito</a>
+                        <a href=href="{% url 'add_to_cart' product.id_product 1 %}" class="btn btn-primary rounded call-to-action btn-main-menu"> Agregar al carrito</a>
                     </div>
                 </div>
             {% endfor %}
         {% else %}
-        <h3 class="text-xs text-gray text-muted">No hay resultados para ls bsuqueda: <em>{{query}}</em> </h3>
+        <h3 class="text-xs text-gray text-muted">No hay resultados para ls busqueda: <em>{{query}}</em> </h3>
         {% endif %}
     </div>
 </div>

@@ -16,12 +16,13 @@ To Do List:
     DONE * Agregar al Carrito
     DONE * Incrementar articulos del carrito
     DONE * Desincrementar articulos del carrito
-    * Actualizar items en el carrito
+    DONE * Actualizar items en el carrito
     DONE * Eliminar objetos del carrito
-    * Limpiar carrito
-    * Pagina de cuentas
-    * Ver productos del carrito
-    * Crear una pagina de cuentas
+    DONE * Limpiar carrito
+    DONE * Pagina de cuentas
+    DONE * Ver productos del carrito
+    DONE * Numero de items en carrito siempre visible
+    * Crear una pagina pago
     * Compra por el Carrito
     * Pago por diversas vias electronicas
     * Deploy final
