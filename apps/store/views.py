@@ -9,6 +9,8 @@ from django.contrib.auth.decorators import login_required
 #Carrito
 def add_to_cart(request, product_id, quantity):
     cart = Cart(request)
+    quantity = int(quantity)
+    print(cart)
     cart.add(product_id, quantity)  
     return redirect('/')
 
