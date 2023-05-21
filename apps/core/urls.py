@@ -6,6 +6,5 @@ urlpatterns = [
     path('about/', about, name='about'),
     path('info/', info, name='info'),
     path('', include('apps.store.urls')),
-    #path('', borrame, name="borrame")
 ]
 
