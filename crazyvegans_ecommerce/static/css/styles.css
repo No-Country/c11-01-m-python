@@ -162,4 +162,7 @@ footer a {
     color:white;
 }
 
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
 /* Fin de Call to Actions y botones */

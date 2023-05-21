@@ -70,7 +70,7 @@ def checkout(request):
 
             cart.clear()
 
-            return redirect('/store/invoice.html')
+            return redirect('/store/invoice/' + str(order.id))
     else:
         form = OrderForm()
 
@@ -103,5 +103,10 @@ def search(request):
     })
 
 #Ventana de Gracias
-def invoice(request, id):
-    return render(request, 'store/invoice.html')
+def invoice(request, pk):
+    order = get_object_or_404(Order, pk = pk)
+    orderitems = OrderItem.objects.filter(order = pk).distinct()
+    return render(request, 'store/invoice.html', {
+        'order' : order,
+        'orderitems' : orderitems
+    })

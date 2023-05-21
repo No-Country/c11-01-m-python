@@ -14,35 +14,53 @@
                   <hr class="mt-0 mb-4">
                   <div class="row pt-1">
                     <div class="col-6 mb-3">
-                      <h6>Email</h6>
-                      <p class="text-muted"> {{ account.email }}</p>
+                      <h6 class="text-muted">Email</h6>
+                      <strong> {{ account.email }}</strong>
                     </div>
                     <div class="col-6 mb-3">
-                      <h6>Telefono:</h6>
-                      <p class="text-muted"> {{ account.phone }}</p>
+                      <h6 class="text-muted">Telefono:</h6>
+                      <strong> {{ account.phone }}</strong>
                     </div>
                     <div class="col-6 mb-3">
-                        <h6>Direccion:</h6>
-                        <p class="text-muted"> {{ account.direction }}</p>
+                        <h6 class="text-muted">Direccion:</h6>
+                        <strong> {{ account.direction }}</strong>
                     </div>
                     <div class="col-6 mb-3">
-                        <h6>Ultima entrada:</h6>
-                        <p class="text-muted"> {{ account.last_login }}</p>
+                        <h6 class="text-muted">Ultima entrada:</h6>
+                        <strong> {{ account.last_login }}</strong>
                     </div>
                   </div>
-                  <h3>Ordenes:</h3>
+                  <!-- ORDENES -->
+                  <h3 data-bs-toggle="collapse" href="#collapseOrders" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Ordenes <img src="{% static "images/icons/down-arrow.png" %}" width="25" height="25" id="imgUpDown" onclick="changeImage()">
+                  </h3>
                   <hr class="mt-0 mb-4">
                   <div class="row pt-1">
-                    <div class="col-6 mb-3">
-                        <div class="dropdown-menu" aria-labelledby="id_shopping_links">
-                            Aqui van las ordenes
-                        </div>
-                    </div>
-                    <div class="col-6 mb-3">
-                      <h6>Most Viewed</h6>
-                      <p class="text-muted">Dolor sit amet</p>
+                    <div class="col-12 mb-3">                    
+                      <div class="collapse" id="collapseOrders">                 
+                          {% for order in orders%}
+                          <div class="card card-body">
+                            <div class="row">
+                              <span class ="col">
+                                <span class="text-muted">Codigo:</span><strong>{{order.id}}</strong>
+                              </span>
+                              <span class ="col">
+                                <span class="text-muted">Metodo de pago:</span> <strong>{{ order.paid_method }}</strong>
+                              </span>
+                              <span class ="col">
+                                <span class="text-muted">Total:</span> <strong>${{ order.paid_amount}}</strong>
+                              </span>
+                              <span class ="col">
+                                <span class="text-muted"> Fecha:</span> <strong>${{ order.created_at}}</strong>
+                              </span>
+                            </div>
+                            
+                          </div>
+                          {% endfor %}           
+                      </div>               
                     </div>
                   </div>
+                  <!-- Fin de las Ordenes-->
                 </div>
               </div>
             </div>
@@ -50,4 +68,13 @@
         </div>
       </div>
     </div>
+    <script>
+      function changeImage() {
+        if (document.getElementById("imgUpDown").src == "images/icons/down-arrow.png"){
+            document.getElementById("imgUpDown").src = "images/icons/up-arrow.png";
+        } else {
+            document.getElementById("imgUpDown").src = "images/icons/down-arrow.png";
+        }
+    }
+    </script>
 {% endblock %}

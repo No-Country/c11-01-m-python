@@ -4,6 +4,7 @@ from django.contrib.auth import login, authenticate, logout
 from apps.account.models import Account 
 from django.conf import settings
 from apps.account.forms import RegistrationForm, AccountAuthenticationForm
+from apps.store.models import Order
 
 
 def register_view(request, *args, **kwargs):
@@ -86,8 +87,12 @@ def account_view(request, *args, **kwargs):
 		return redirect('/')
 	elif not user.is_authenticated:
 		return redirect('/account/login')
+	
+	#Miramos las ordenes que tiene dicho usuario
+	orders = Order.objects.filter(created_by = user_id)[:10]
 	return render(request, 'account/account.html', {
-		'account': account
+		'account': account,
+		'orders' : orders
 	})
 
 

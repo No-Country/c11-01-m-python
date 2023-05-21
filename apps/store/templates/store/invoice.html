@@ -1,6 +1,102 @@
 {% extends 'core/base.html' %}
-
+{% load static %}
 {%block title%} Products {%endblock%}
 {% block content%}
-Ventana de Factura y Gracias.
+<div class="container mt-6 mb-7">
+    <div class="row justify-content-center">
+      <div class="col-lg-12 col-xl-7">
+        <div class="card">
+          <div class="card-body p-5">
+            <img src="{% static "images/company/provisional_logo.png" %}" width="145" height="60">
+            <h3 class="pt-3">
+              Hey {{order.first_name}}
+            </h3>
+            <p class="fs-sm">
+              Muchas gracias por su compra en <strong>Crazy Vegans</strong>. Esperamos que tenga hoy y siempre el mejor de los días.
+            </p>
+
+            <div class="border-top border-gray-200 pt-4 mt-4">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="text-muted mb-2">Numero de Factura.</div>
+                  <strong>{{order.id}} </strong>
+                </div>
+                <div class="col-md-6 text-md-end">
+                  <div class="text-muted mb-2">Fecha de pago</div>
+                  <strong>{{order.created_at}}</strong>
+                </div>          
+              </div>
+            </div>
+
+            <div class="border-top border-gray-200 mt-4 py-4">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="text-muted mb-2">Cliente</div>
+                  <strong>
+                    {{order.first_name}} {{order.last_name}}
+                  </strong>
+                  <p class="fs-sm">
+                    {{ order.address }}
+                    <br>
+                    {{order.paid_method}}
+                  </p>             
+                </div>
+                <div class="col-md-6 text-md-end">
+                  <div class="text-muted mb-2">Pago a</div>
+                  <strong>
+                    Crazy Vegans
+                  </strong>
+                  <p class="fs-sm">
+                    Avenida Siempre viva No.5
+                    <br>
+                    <a href="#!" class="text-purple">crazyvegans@mail.com
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <table class="table border-bottom border-gray-200 mt-3">
+              <thead>
+                <tr>
+                  <th scope="col" class="fs-sm text-dark text-uppercase-bold-sm px-0">Descripcion</th>
+                  <th scope="col" class="fs-sm text-dark text-uppercase-bold-sm text-end px-0">Monto</th>
+                  <th scope="col" class="fs-sm text-dark text-uppercase-bold-sm text-end px-0">Cant.</th>
+                </tr>
+              </thead>
+              <tbody>                     
+                {% for item in orderitems %}
+                <tr>
+                    <td class="px-0">{{item.product}}</td>
+                    <td class="text-end px-0">{{item.price}}</td>
+                    <td class="text-end px-0">{{item.quantity}}</td>
+                <tr>
+                {% endfor %}
+              </tbody>
+            </table>
+
+            <div class="mt-5">
+              <div class="d-flex justify-content-end">
+                <p class="text-muted me-3">Subtotal:</p>
+                <span>{{order.paid_amount}}</span>
+              </div>
+              <div class="d-flex justify-content-end">
+                <p class="text-muted me-3">Envio</p>
+                <span>$0</span>
+              </div>
+              <div class="d-flex justify-content-end mt-3">
+                <h5 class="me-3">Total:</h5>
+                <h5 class="text-success">${{order.paid_amount}}</h5>
+              </div>
+            </div>
+          </div>
+          <div class="d-print-none">
+            <div class="float-end">
+                <a href="javascript:window.print()" class="btn call-to-action me-1"><i class="fa fa-print"></i></a>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
 {% endblock %}
