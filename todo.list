@@ -19,7 +19,7 @@ To Do List:
     DONE * Actualizar items en el carrito
     DONE * Eliminar objetos del carrito
     DONE * Limpiar carrito
-    DONE * Pagina de cuentas
+    DONE * Pagina de cuentas (account page)
     DONE * Ver productos del carrito
     DONE * Numero de items en carrito siempre visible
     DONE * Crear una pagina pago
@@ -27,4 +27,21 @@ To Do List:
     DONE * Pago por diversas vias electronicas
     DONE * Pagina de factura y gracias
     DONE * Pagina About US
+    DONE * Pantallas Responsive: 
+            Base Page
+            Productos
+            Ofertas
+            Sobre nosotros
+            Donde estamos
+            navbar
+            Search bar
+            Login
+            Register
+            Cheackout
+            Payment Page
+            Footer
+    DONE * Validacion de usuarios registrados
+    DONE * Seguridad de la creacion de articulos
+    DONE * Seguridad de la creacion de super usuarios
+    
     * Deploy final
