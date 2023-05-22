@@ -1,8 +1,10 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.core.paginator import Paginator
 from apps.store.models import Product, Category, Order, OrderItem
 from apps.store.cart import Cart
 from apps.store.forms import OrderForm
 from apps.account.models import Account
+
 
 #Decoradores
 from django.contrib.auth.decorators import login_required
@@ -85,9 +87,20 @@ def checkout(request):
 def category_detail(request, slug):
     category = get_object_or_404(Category, slug = slug)
     products = category.products.all()
+
+    p = Paginator(products, 9)
+    
+    page_number = request.GET.get('page')
+    try:
+         page_obj = p.get_page(page_number)
+    except PageNotAnInteger:
+        page_obj = p.page(1)
+    except EmptyPage:
+        page_obj = p.page(p.num_pages)
+
     return render(request, 'store/category_detail.html', {
         'category' : category,
-        'products' : products
+        'page_obj' : page_obj,
     })
 
 def product_detail(request, category_slug, slug):
@@ -99,9 +112,20 @@ def product_detail(request, category_slug, slug):
 def search(request):
     query = request.GET.get('query', '')
     products = Product.objects.filter(name_product__icontains=query)
+    
+    p = Paginator(products, 9)
+    
+    page_number = request.GET.get('page')
+    try:
+         page_obj = p.get_page(page_number)
+    except PageNotAnInteger:
+        page_obj = p.page(1)
+    except EmptyPage:
+        page_obj = p.page(p.num_pages)
+
     return render(request, 'store/search.html', {
         'query':query,
-        'products': products
+        'page_obj' : page_obj,
     })
 
 #Ventana de Gracias

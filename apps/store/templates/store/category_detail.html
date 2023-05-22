@@ -8,7 +8,7 @@
         {% drop_menu %}
     </div>
     <div class="row p-3 pb-2 pt-3">
-        {% for product in products%}
+        {% for product in page_obj.object_list %}
             <div class="card col-xs-12 col-md-6 col-lg-3" style="width: 18rem; margin: 10px; border-radius: 30px;">
                 <a href="{% url 'product_detail' product.category.slug product.slug %}" style="text-decoration:none; color: #000000; opacity:0.87;"><img src="{{ product.image_product.url }}" class="card-img-top" style="width: 250px; height: 200px;"></a>
                 <div class="card-body">
@@ -25,4 +25,14 @@
         {% endfor %}
     </div>
 </div>
+<center>
+    {%if page_obj.has_previous %} {# si existe la página anterior #}
+        <a href="?page={{page_obj.previous_page_number}}"><i class="fa-solid fa-chevron-left"></i></a> {# Link de la pagina anterior #}
+    {% endif %}
+    <span>{{ page_obj.number }}</span> {# Numero de la pagina actual #}
+    
+    {%if page_obj.has_next %} {# Revisa si existe otra pagina #}
+        <a href="?page={{page_obj.next_page_number}}"><i class="fa-solid fa-chevron-right"></i></a> {# Link de la siguiente pagina#}
+    {% endif %}
+</center>
 {% endblock %}
