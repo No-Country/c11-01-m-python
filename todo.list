@@ -43,6 +43,8 @@ To Do List:
     DONE * Validacion de usuarios registrados
     DONE * Seguridad de la creacion de articulos
     DONE * Seguridad de la creacion de super usuarios
-    
-    * Deploy final
+    DONE * Paginacion del main page
+    DONE * Paginacion de Categories page
+    DONE * PAginacion del SearchPage
+    DONE * Deploy final
 c1101python
