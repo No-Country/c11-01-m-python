@@ -153,6 +153,11 @@ footer a {
 /*Fin de los formularios personalizados*/
 
 /* Call to actions y botones */
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+
 .call-to-action {
     background-color: #016944;
     color:white;   
@@ -162,7 +167,5 @@ footer a {
     color:white;
 }
 
-a:link, a:visited, a:active {
-    text-decoration:none;
-}
+
 /* Fin de Call to Actions y botones */
