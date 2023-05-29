@@ -10,7 +10,7 @@ def borrame(request):
     return render(request, 'core/mainpage.html')
 
 def mainpage(request):
-    products = Product.objects.all().reverse()
+    products = Product.objects.all().order_by('-created_at')
     cart = Cart(request)
     p = Paginator(products, 9)
     

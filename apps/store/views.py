@@ -86,7 +86,7 @@ def checkout(request):
 #fin del carrito
 def category_detail(request, slug):
     category = get_object_or_404(Category, slug = slug)
-    products = category.products.all()
+    products = category.products.all().order_by('-created_at')
 
     p = Paginator(products, 9)
     

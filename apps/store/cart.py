@@ -38,6 +38,8 @@ class Cart(object):
             self.cart[product_id]['quantity'] += int(quantity)
             if self.cart[product_id]['quantity'] == 0:
                 self.remove(product_id)
+            elif self.cart[product_id]['quantity'] > 10:
+                self.cart[product_id]['quantity'] = 10
 
         # if update_quantity:
         #     self.cart[product_id]['quantity'] += int(quantity)

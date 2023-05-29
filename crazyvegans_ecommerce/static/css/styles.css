@@ -117,7 +117,6 @@ footer a {
 .footer-class {
     max-height: 200px;
 }
-/*navbar de prueba*/
 
 /*Modificaciones especializadas como drop_menu, etc*/
 .input-transparent{
@@ -149,7 +148,6 @@ footer a {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
-
 /*Fin de los formularios personalizados*/
 
 /* Call to actions y botones */
@@ -166,6 +164,4 @@ a:link, a:visited, a:active {
     background-color: #F08F20;
     color:white;
 }
-
-
 /* Fin de Call to Actions y botones */
