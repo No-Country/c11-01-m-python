@@ -34,17 +34,13 @@ class Cart(object):
         if product_id not in self.cart:
             self.cart[product_id] = {'quantity': int(quantity), 'id': product_id}
 
+        #Los productos no deben de pasar de 10 en cantidad para evitar compras mayoristas via ecommerce
         elif product_id == product_id:
             self.cart[product_id]['quantity'] += int(quantity)
             if self.cart[product_id]['quantity'] == 0:
                 self.remove(product_id)
             elif self.cart[product_id]['quantity'] > 10:
                 self.cart[product_id]['quantity'] = 10
-
-        # if update_quantity:
-        #     self.cart[product_id]['quantity'] += int(quantity)
-        #     if self.cart[product_id]['quantity'] == 0:
-        #         self.remove(product_id)  
         self.save()
     
     def remove(self, product_id):
@@ -58,6 +54,5 @@ class Cart(object):
 
     def get_total_cost(self):
         for p in self.cart.keys():
-            self.cart[str(p)]['product'] = Product.objects.get(pk=p)
-        
+            self.cart[str(p)]['product'] = Product.objects.get(pk=p)   
         return float(sum(item['product'].price_product * item['quantity'] for item in self.cart.values()))
