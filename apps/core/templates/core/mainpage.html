@@ -1,42 +1,58 @@
-
 {% extends 'core/base.html' %}
+{% load static %}
 {% load drop_menu %}
 
-{%block title%} Products {%endblock%}
+{%block title%} {%endblock%}
 {% block content%}
-<h1 class="text-2xl">Productos</h1>
-<div class="container-fluid" style="margin-left: 7%;">
-    <div class ="row pb-0 justify-content-end" style="margin-left: 74%;">
-        {% drop_menu %}
+<div class="homepage">
+    <!--TOP-->
+    <div class="row">       
+        <img src="{% static "images/company/HomeTop.jpg" %}" class="img-responsive">
     </div>
-    
-    <div class="row p-3 pb-2 pt-3">
-        {% for product in page_obj.object_list %}
-            <div class="card col-xs-12 col-md-6 col-lg-3" style="width: 18rem; margin: 10px; border-radius: 30px;">
-                <a href="{% url 'product_detail' product.category.slug product.slug %}" style="text-decoration:none; color: #000000; opacity:0.87;"><img src="{{ product.image_product.url }}" class="card-img-top" style="width: 250px; height: 200px;"></a>
-                <div class="card-body">
-                    <div style="display: flex; flex-direction: row">
-                        <h5 class="card-title"> <a href="{% url 'product_detail' product.category.slug product.slug %}" style="text-decoration:none; color: #000000; opacity:0.87;">{{ product.name_product }}</a></h5>
-                    </div>
-                    <strong class="card-text">{{ product.price_product}}</strong>
-                    <p class="card-text">{{ product.description_product}}</p>                                 
-                </div>             
-                <div class="card-footer text-end" style="background-color:white;">
-                    <a href="{% url 'add_to_cart' product.id_product 1 %}" class="btn btn-primary rounded call-to-action btn-main-menu"> Agregar al carrito</a>
-                </div>
+    <div class="row">
+        <div class="d-flex justify-content-around pt-4">
+            <div class="p-2">
+                <p class="text-center"><i class="fa-regular fa-credit-card" style="color: #429e14; font-size: 25px;"></i></p>
+                <p class="text-center"><strong>Pagá con todas las tarjetas</strong></p>
+                <p class="text-center">Tus pagos seguros. Es rápido y facil</p>
             </div>
-        {% endfor %}
+            <div class="p-2">
+                <p class="text-center"><i class="fa-solid fa-truck" style="color: #429e14; font-size: 25px;"></i></p>
+                <p class="text-center"><strong>Enviamos a todo el país</strong></p>
+                <p class="text-center">Envio gratis a partir de $6000</p>
+            </div>
+            <div class="p-2">
+                <p class="text-center"><i class="fa-regular fa-phone" style="color: #429e14; font-size: 25px;"></i></p>
+                <p class="text-center"><strong>¿Necesitas Ayuda?</strong></p>
+                <p class="text-center">Servicio de atención al cliente 111 111 111</p>
+                <p class="text-center">De lunes a viernes 9:00 - 17:30</p>
+            </div>
+        </div>
     </div>
-</div>
-<center>
-    {%if page_obj.has_previous %} {# si existe la página anterior #}
-        <a href="?page={{page_obj.previous_page_number}}"><i class="fa-solid fa-chevron-left"></i></a> {# Link de la pagina anterior #}
-    {% endif %}
-    <span>{{ page_obj.number }}</span> {# Numero de la pagina actual #}
     
-    {%if page_obj.has_next %} {# Revisa si existe otra pagina #}
-        <a href="?page={{page_obj.next_page_number}}"><i class="fa-solid fa-chevron-right"></i></a> {# Link de la siguiente pagina#}
-    {% endif %}
-</center>
-{%endblock%}
+    <!--Mid-->
+    <div class="row">
+        <div class="d-flex justify-content-around pt-4">
+            <div class="p-1">
+                <img src="{% static "images/company/MidLeft.png" %}" class="rounded">
+            </div>
+            <div class="p-1">
+                <img src="{% static "images/company/MidRight.png" %}" class="rounded">
+            </div>
+        </div>
+    </div>
 
+    <!--BOT-->
+    <div class="row pt-4">       
+        <img src="{% static "images/company/MidConoce.png" %}" class="img-responsive rounded">
+    </div>
+
+    <div class="row pt-4 pb-2">  
+        <div class="d-flex justify-content-around pt-4">     
+        <img src="{% static "images/company/BotQuienesSomos.png" %}" class="img-responsive rounded" style="width:80%">
+        </div>
+    </div>
+
+
+</div>
+{%endblock%}

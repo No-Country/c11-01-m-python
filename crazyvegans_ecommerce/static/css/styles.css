@@ -7,6 +7,12 @@ body {
     min-height: 100vh;
 }
 
+/*Quitar Scroll Lateral*/
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 /* Inico del nav personalizado*/
 
 /*Para mantener el patron del primer navbar, si se hace un cambio
@@ -103,6 +109,7 @@ h1 {
 .container{
     width: 100%;
     margin-top: 2%;
+    margin: 0 auto;
 }
 
 /*Footer  Color: #fdcf81*/
@@ -165,3 +172,19 @@ a:link, a:visited, a:active {
     color:white;
 }
 /* Fin de Call to Actions y botones */
+
+/*Codigos para la maquetacion del home page*/
+.homepage {
+    padding-left: 10px;
+    position: relative;
+    left: calc(-50vw + 50%);
+    width: 100vw;
+}
+
+/*quitar espaciado a los p*/
+
+.homepage p {
+    margin: 0;
+    padding: 0;
+}
+/*Fin del homepage*/

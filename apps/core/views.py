@@ -10,6 +10,9 @@ def borrame(request):
     return render(request, 'core/mainpage.html')
 
 def mainpage(request):
+    return render(request, 'core/mainpage.html')
+
+def product(request):
     products = Product.objects.all().order_by('-created_at')
     cart = Cart(request)
     p = Paginator(products, 9)
@@ -22,7 +25,7 @@ def mainpage(request):
     except EmptyPage:
         page_obj = p.page(p.num_pages)
 
-    return render(request, 'core/mainpage.html', {
+    return render(request, 'core/product.html', {
         'cart' : cart,
         'page_obj' : page_obj,
     })

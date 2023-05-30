@@ -32,7 +32,8 @@
                   </div>
                   <!-- ORDENES -->
                   <h3 data-bs-toggle="collapse" href="#collapseOrders" role="button" aria-expanded="false" aria-controls="collapseExample">
-                    Ordenes <img src="{% static "images/icons/down-arrow.png" %}" width="25" height="25" id="imgUpDown" onclick="changeImage()">
+                    Ordenes <i class="fa-regular fa-chevron-down" onclick="ChangeIcon()" id="imgUpDown"></i>
+                    {% comment %} Ordenes <img src="{% static "images/icons/down-arrow.png" %}" width="25" height="25" id="imgUpDown" onclick="changeImage()"> {% endcomment %}
                   </h3>
                   <hr class="mt-0 mb-4">
                   <div class="row pt-1">
@@ -69,12 +70,15 @@
       </div>
     </div>
     <script>
-      function changeImage() {
-        if (document.getElementById("imgUpDown").src == "images/icons/down-arrow.png"){
-            document.getElementById("imgUpDown").src = "images/icons/up-arrow.png";
+      let ChangeIcon = function(){
+        let clase = document.getElementById('imgUpDown');
+        let status = 0
+        if (document.getElementById("imgUpDown").className == "fa-regular fa-chevron-down")
+        {
+          document.getElementById("imgUpDown").className = "fa-regular fa-chevron-up"
         } else {
-            document.getElementById("imgUpDown").src = "images/icons/down-arrow.png";
+          document.getElementById("imgUpDown").className = "fa-regular fa-chevron-down"
         }
-    }
+      }
     </script>
 {% endblock %}
