@@ -130,6 +130,12 @@ footer a {
     background-color: transparent;
     border:none;
 }
+
+/*Breadscrumbs*/
+.breadcrumb-item {
+    color: black;
+    opacity: 0.87;
+}
 /*Fin de las modificaciones especializadas*/
 
 /*Formulario de registro*/
@@ -161,6 +167,8 @@ footer a {
 
 a:link, a:visited, a:active {
     text-decoration:none;
+    color: black;
+    opacity: 0.87;
 }
 
 .call-to-action {

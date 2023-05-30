@@ -3,7 +3,13 @@
 {%block title%} Detalle del Producto {%endblock%}
 
 {% block content %}
-<h1 class="text-2xl">Detalle</h1>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item"><a href="/product">Producto</a></li>
+      <li class="breadcrumb-item active" aria-current="page">{{product.name_product}}</li>
+    </ol>
+  </nav>
 <div class="container mt-5 mb-5 rounded">
     <div class="row d-flex justify-content-center">
         <div class="col-md-10">

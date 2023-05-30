@@ -3,7 +3,12 @@
 
 {%block title%} Products {%endblock%}
 {% block content%}
-<h1 class="text-2xl">Buscar</h1>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Buscar</li>
+    </ol>
+  </nav>
 <span class="text-xs text-gray text-muted">Resultado de la busqueda: <em>{{query}}</em> </span>
 <div class="container-fluid" style="margin-left: 7%;">
     <div class ="row pb-0 justify-content-end" style="margin-left: 74%;">
