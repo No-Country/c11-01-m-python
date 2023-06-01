@@ -30,6 +30,8 @@ class Product(models.Model):
     slug = models.SlugField(max_length=100, unique=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    is_offer = models.BooleanField(default=False)
+    percent_offer = models.IntegerField(default= 0)
 
     class Meta:
         ordering = ('-created_at',)
@@ -38,6 +40,11 @@ class Product(models.Model):
     
     def __str__(self):
         return self.name_product
+    
+    @property
+    def price_total(self):
+        result = self.price_product - (self.price_product * self.percent_offer) / 100
+        return result
 
 class Order(models.Model):
     first_name = models.CharField(max_length=255)
@@ -72,12 +79,3 @@ class OrderItem(models.Model):
 
     def get_total_price(self):
         return self.price
-
-
-
-
-
-
-
-
-    

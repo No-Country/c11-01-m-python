@@ -14,7 +14,7 @@ def add_to_cart(request, product_id, quantity):
     quantity = int(quantity)
     print(cart)
     cart.add(product_id, quantity)  
-    return redirect('/product')
+    return redirect(request.META.get('HTTP_REFERER', 'redirect_if_referer_not_found'))
 
 #Agregar cantidad variable en el detalle 
 def add_quantity(request, product_id):
@@ -22,12 +22,12 @@ def add_quantity(request, product_id):
     cart = Cart(request)
     quantity = int(query)
     cart.add(product_id, quantity)
-    return redirect('/product')
+    return redirect(request.META.get('HTTP_REFERER', 'redirect_if_referer_not_found'))
 
 def remove_from_cart(request, product_id):
     cart = Cart(request)
     cart.remove(str(product_id))
-    return redirect('/product')
+    return redirect(request.META.get('HTTP_REFERER', 'redirect_if_referer_not_found'))
 
 def change_quantity(request, product_id):
     action = request.GET.get('action', '')
@@ -38,7 +38,7 @@ def change_quantity(request, product_id):
         cart = Cart(request)
         cart.add(product_id, quantity, True)
     
-    return redirect('/')
+    return redirect(request.META.get('HTTP_REFERER', 'redirect_if_referer_not_found'))
 
 def cart_view(request):
     cart = Cart(request)

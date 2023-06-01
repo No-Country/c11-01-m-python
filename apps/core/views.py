@@ -13,7 +13,7 @@ def mainpage(request):
     return render(request, 'core/mainpage.html')
 
 def product(request):
-    products = Product.objects.all().order_by('-created_at')
+    products = Product.objects.all().order_by('-created_at').filter(is_offer = False)
     cart = Cart(request)
     p = Paginator(products, 9)
     
@@ -26,6 +26,24 @@ def product(request):
         page_obj = p.page(p.num_pages)
 
     return render(request, 'core/product.html', {
+        'cart' : cart,
+        'page_obj' : page_obj,
+    })
+
+def offer(request):
+    products = Product.objects.all().order_by('-created_at').filter(is_offer = True)
+    cart = Cart(request)
+    p = Paginator(products, 9)
+    
+    page_number = request.GET.get('page')
+    try:
+         page_obj = p.get_page(page_number)
+    except PageNotAnInteger:
+        page_obj = p.page(1)
+    except EmptyPage:
+        page_obj = p.page(p.num_pages)
+
+    return render(request, 'core/offer.html', {
         'cart' : cart,
         'page_obj' : page_obj,
     })
