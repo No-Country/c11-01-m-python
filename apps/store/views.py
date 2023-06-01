@@ -14,7 +14,7 @@ def add_to_cart(request, product_id, quantity):
     quantity = int(quantity)
     print(cart)
     cart.add(product_id, quantity)  
-    return redirect('/')
+    return redirect('/product')
 
 #Agregar cantidad variable en el detalle 
 def add_quantity(request, product_id):
@@ -22,12 +22,12 @@ def add_quantity(request, product_id):
     cart = Cart(request)
     quantity = int(query)
     cart.add(product_id, quantity)
-    return redirect('/')
+    return redirect('/product')
 
 def remove_from_cart(request, product_id):
     cart = Cart(request)
     cart.remove(str(product_id))
-    return redirect('/')
+    return redirect('/product')
 
 def change_quantity(request, product_id):
     action = request.GET.get('action', '')
