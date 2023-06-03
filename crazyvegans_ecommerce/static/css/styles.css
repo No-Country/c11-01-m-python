@@ -179,12 +179,12 @@ footer li {
 .call-to-action {
     background-color: #9eb021;
     color:white;  
-    border-radius: 15px 
+    border-radius: 15px;
 }
 .call-to-action:hover{
     background-color: #E9961E;
     color:white;
-    border-radius: 15px 
+    border-radius: 15px;
 }
 /* Fin de Call to Actions y botones */
 
