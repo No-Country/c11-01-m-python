@@ -14,22 +14,25 @@
 	<link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 
   </head>
   <body>
 <!-- Header -->
-<div class="d-flex flex-column flex-lg-row p-3 px-md-4 mb-3 border-bottom shadow-sm navbar-custom">
+<div class="d-flex flex-column flex-lg-row pt-3 px-md-4 mb-1 border-bottom shadow-sm navbar-custom">
 
 	<!-- MEDIUM+ SCREENS -->
 	<div class="d-none d-md-flex flex-row my-auto flex-grow-1 align-items-center">
 		<h5 class="mr-3 font-weight-normal justify-content-start">
-			<a class="p-2 text-dark" href="/"><img src="{% static "images/company/provisional_logo.png" %}" width="120" height="45"></a>
+			<a class="p-2 text-dark" href="/" style="margin-left: 15%;"><img src="{% static "images/company/provisional_logo.png" %}" width="120" height="45"></a>
 		</h5>
-		<form action="/search/" class="search-bar" method="get"> 
-			<input type="search" placeholder="Busca lo que quieras" name="query" id="id_q_large" >
+
+		<!--Barra de busqueda-->
+		<form class="search-form" action="/search/" style="margin-left:13%; width: 600px;" method="get">
+			<input type="search" placeholder="Buscá un producto vegano" name="query" class="text-center">
 			<button type="submit"><i class="fa-solid fa-magnifying-glass"></i>
 			</button>
-    	</form>
+		  </form>
 
 		<div class="d-flex flex-row-reverse flex-grow-1">
 			<nav class="">
@@ -37,14 +40,14 @@
 					<div class="dropdown dropleft show p-2">
 						<div class="d-flex flex-row">
 							<div class="btn-group dropleft">
-								<i class="fa-regular fa-cart-shopping account-image  m-auto d-block dropdown-toggle" id="id_shopping_links" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+								<i class="fa-regular fa-cart-shopping account-image  m-auto d-block dropdown-toggle" id="id_shopping_links" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #429E14"></i>
 				<span class="badge" style="padding-right: 25px; color: #016944;">{{ cart | length}}</span>
                 <div class="dropdown-menu" aria-labelledby="id_shopping_links">
 					{% include "core/cart_view.html" %}
                 </div>
               </div>
 					<div class="btn-group dropleft">
-						<i class="fa-solid fa-user  m-auto d-block dropdown-toggle" id="id_profile_links" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ></i>
+						<i class="fa-solid fa-user  m-auto d-block dropdown-toggle" id="id_profile_links" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #429E14"></i>
 						<div class="dropdown-menu" aria-labelledby="id_profile_links">
 							<a class="dropdown-item" href="{% url 'account' user_id=request.user.id %}">Account</a>
 							<a class="dropdown-item" href="/account/logout">Logout</a>
@@ -54,10 +57,11 @@
 						
 					</div>
 				{% else %}
-					<a class="p-2 text-dark" href="/account/login">Login</a>
+					<a class="p-2" href="/account/login" style="color:#429e14;">Iniciá sección</a>
+					<span>|</span>
 					<a class="p-2 text-dark" href="/account/register">Register</a>
           <div class="btn-group dropleft">
-            <i class="fa-regular fa-cart-shopping account-image  m-auto d-block dropdown-toggle" id="id_shopping_links" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+            <i class="fa-regular fa-cart-shopping account-image  m-auto d-block dropdown-toggle" id="id_shopping_links" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #429E14"></i>
             <span class="badge" style="padding-right: 25px; color: #016944;">{{ cart | length}}</span>
 			<div class="dropdown-menu" aria-labelledby="id_shopping_links">
 				{% include "core/cart_view.html" %}
@@ -75,11 +79,13 @@
 		<h5 class="font-weight-normal">
 		<a class="p-2 text-dark" href="/"><img src="{% static "images/company/provisional_logo.png" %}" width="120" height="45"></a>
 		</h5>
-		<form action="/search/" class="search-bar" method="get">
-      <input type="search" placeholder="Busca lo que quieras" name="query" id="id_q_small">
-      <button type="submit"><i class="fa-solid fa-magnifying-glass"></i>
-      </button>
-    </form>
+		<!--Barra de busqueda-->
+		<form class="search-form" action="/search/" method="get">
+			<input type="search" placeholder="Buscá un producto vegano" name="query" class="text-center">
+			<button type="submit"><i class="fa-solid fa-magnifying-glass"></i>
+			</button>
+		</form>
+		<!--Fin de la barra de busqueda-->
 		<div class="d-flex flex-row-reverse flex-grow-1">
 			<nav class="">
 				{% if request.user.is_authenticated %}
@@ -87,7 +93,7 @@
 					<div class="d-flex flex-row">
 
             <div class="btn-group dropleft" style="padding-right: 15%;">
-				<i class="fa-regular fa-cart-shopping account-image  m-auto d-block dropdown-toggle" id="id_shopping_links" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+				<i class="fa-regular fa-cart-shopping account-image  m-auto d-block dropdown-toggle" id="id_shopping_links" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #429E14"></i>
 			  <span class="badge" style="padding-right: 25px; color: #016944;">{{ cart | length}}</span> 
 			  <div class="dropdown-menu" aria-labelledby="id_shopping_links">
                 {% include "core/cart_view.html" %}
@@ -103,10 +109,11 @@
 					</div>
 				</div>
 				{% else %}
-					<a class="p-2 text-dark" href="/account/login">Login</a>
+					<a class="p-2" href="/account/login" style="color:#429e14;">Iniciá sección</a>
+					<span>|</span>
 					<a class="p-2 text-dark m-2" href="/account/register">Register</a>
           <div class="btn-group dropleft">
-            <i class="fa-regular fa-cart-shopping account-image  m-auto d-block dropdown-toggle" id="id_shopping_links" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+            <i class="fa-regular fa-cart-shopping account-image  m-auto d-block dropdown-toggle" id="id_shopping_links" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #429E14"></i>
             <div class="dropdown-menu" aria-labelledby="id_shopping_links">
 				{% include "core/cart_view.html" %}
             </div>
@@ -118,17 +125,17 @@
 	<!-- END SMALL SCREENS -->
 </div>
  <!--Inicio del navbar-->
- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+ <nav class="navbar navbar-expand-lg navbar-custom" style="margin-top:0px">
   <div class="container-fluid">
       <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
           <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse"  style="margin-left:20%;">
           <div class="navbar-nav" style="font-size:20px;">
-              <a href="/product" class="nav-item nav-link nav-item-second">Productos</a>
-              <a href="/offer" class="nav-item nav-link nav-item-second">Ofertas</a>
-              <a href="/about" class="nav-item nav-link nav-item-second">Sobre Nosotros</a>
-              <a href="/info" class="nav-item nav-link nav-item-second">Dónde Estamos</a>
+              <a href="/product" class="nav-item nav-link nav-item-second" style="color:#429e14;">PRODUCTOS</a>
+              <a href="/offer" class="nav-item nav-link nav-item-second" style="color:#429e14;">OFERTAS</a>
+              <a href="/about" class="nav-item nav-link nav-item-second" style="color:#429e14;">SOBRE NOSOTROS</a>
+              <a href="/info" class="nav-item nav-link nav-item-second" style="color:#429e14;">DÓNDE ESTAMOS</a>
           </div>
       </div>
   </div>

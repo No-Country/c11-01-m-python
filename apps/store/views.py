@@ -63,6 +63,12 @@ def checkout(request):
             order = form.save(commit=False)
             order.created_by = request.user
             order.paid_amount = total_price
+            if order.receiver_address != None:
+                order.shipping_address = order.receiver_address
+                order.shipping_name = order.receiver
+            else:
+                order.shipping_address = order.address
+                order.shipping_name = f'{order.first_name}  {order.last_name}'
             order.save()
 
             for item in cart:
@@ -132,6 +138,13 @@ def search(request):
 def invoice(request, pk):
     order = get_object_or_404(Order, pk = pk)
     orderitems = OrderItem.objects.filter(order = pk).distinct()
+    if order.receiver_address != None:
+        order.shipping_address = order.receiver_address
+        order.shipping_name = order.receiver
+    else:
+        order.shipping_address = order.address
+        order.shipping_name = f'{order.first_name}  {order.last_name}'
+
     return render(request, 'store/invoice.html', {
         'order' : order,
         'orderitems' : orderitems

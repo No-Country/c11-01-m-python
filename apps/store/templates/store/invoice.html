@@ -12,7 +12,7 @@
               Hey {{order.first_name}}
             </h3>
             <p class="fs-sm">
-              Muchas gracias por su compra en <strong>Crazy Vegans</strong>. Esperamos que tenga hoy y siempre el mejor de los días.
+              Muchas gracias por su compra en <strong>Crazy Vegan</strong>. Esperamos que tenga hoy y siempre el mejor de los días.
             </p>
 
             <div class="border-top border-gray-200 pt-4 mt-4">
@@ -51,6 +51,21 @@
                     <br>
                     <a href="#!" class="text-purple">crazyvegans@mail.com
                     </a>
+                  </p>
+                </div>
+
+                <div class="row text-md-start pt-4">
+                  <p class="fs-sm">
+                    <strong>Destinatario:</strong>
+                    <br>
+                    <span class="">{{order.shipping_name}}
+                    </span>
+                  </p>
+                  <p class="fs-sm">
+                    <strong>Direccion de envio</strong>
+                    <br>
+                    <span class="">{{order.shipping_address}}
+                    </span>
                   </p>
                 </div>
               </div>

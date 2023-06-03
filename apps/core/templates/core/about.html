@@ -10,53 +10,51 @@
     </ol>
   </nav>
 <div class="container-fluid">
-    <div class="row align-items-center">
-      <div class="col-sm-7">
-        <img src="{% static "images/company/provisional_logo.png" %}" width="550px" height="400px">
-        <div class="d-flex justify-content-between">
-            <div>
-                <i class="fa-solid fa-cart-shopping pe-1"></i><span class="text-uppercase">Productos</span>
-                <br>
-                <span class="text-muted">Comprar</span>
-            </div>
-            <div>
-                <i class="fa-solid fa-truck pe-1"></i><span class="text-uppercase">Enviamos a tu casa</span>
-                <br>
-                <span class="text-muted">Córdoba y alrededores</span>
-            </div>
-            <div style="padding-right: 15%">
-                <i class="fa-brands fa-whatsapp pe-1"></i><span class="text-uppercase">¡Contactanos!</span>
-                <br>
-                <span class="text-muted">11-1111-1111</span>
-            </div>
+    <div
+    class="bg-image"
+    style="
+      background-image: url({% static "images/company/QuienesSomosPage.png" %});
+      height: 627px;
+      width: 940px;
+      border-radius: 15px;
+    ">
+      <div class= "cuadro-about">
+        <div class="p-4">
+          <p>Somos un microemprendimiento dedicado a los alimentos naturales; elaboramos productos alimenticios a base de leches vegetales, sin derivados de origen animal, sin lactosa ni gluten.</p>
+
+          <p>Nuestros productos nacen en Córdoba - ARGENTINA- y llegan a todo el país; contamos con 5 años de dedicación para que cada uno de los productos se destaque.</p>
+    
+          <p>Nuestros ingredientes son de alta calidad y es por eso que nos sentimos orgullos de ello!. </p>
+    
+          <p>Con <strong>Crazy Vegan</strong> podrás descubrir lo rico que es comer sano y natural con: nuestro untable, nuestras QUEmozzas y quesos; nuestra manteVEG; y podrás endúlzate con nuestro dulce de leche de sésamo.</p>
+    
+          <p>Tenemos un gran compromiso con el medio ambiente y el reciclaje por lo que contamos con <strong>el primer envase de polipapel</strong> de Dulce de leche 100% biodegradable;  dándote una opción vegana y ecológica.</p>
         </div>
       </div>
-      <div class="col-sm-5 border mb-5" style="background-color: white; ">
-        <p>
-            Somos un microemprendimiento dedicado a los alimentos naturales.
-            Elaboramos productos alimenticion veganos a base de leches vegetales.
-        </p>
-        <p>
-            Nuestros productos nacen en Córdoba Argentina y llegan a todo el pais.
-            Contamos con 5 años de dedicación para que cada uno de los productos se destaque.
-        </p>
-        <p>
-            Nuestro ingredientes son de alta calidad ¡Y nos sentimos orgulloso de ello!. 
-            Con <strong>Crazy Vegan</strong> podras descubrir lo rico que es comer sano y natural.
-            Con nuestro untable, nuestra QUEmozza y quesos, nuestra manteVEG.
-            Tambien podras endulzarte con nuestro dulce de leche de sesamo.
-        </p>
-        <p>
-            Tenemos un gran compromiso con el medio ambiente, y el recipiente por lo que contamos con el primer envase de polipapel de Dulce de leche 100%
-            biodegradable, dandote una opcion vegana y ecologica.
-        </p>
-        <p>
-            Desde <strong>Crazy Vegan</strong> nos preocupamos por aportar de manera conciente a los
-            Objetivos de Desarollo Sostenible.
-            Todos nuestros productos son producidos de manera artesanal, por lo que nos proecupamos por generar un desarrollo a nivel nacional 
-            y que nuestros insumos tambien lo sean.
-        </p>
-      </div>
     </div>
+</div>
+
+
+<div class="d-flex justify-content-around homepage pt-2 mt-2" style="background-color:#E7E7E7">
+  <div style="color: #429E14">
+      <i class="fa-solid fa-cart-shopping" style="font-size:20px;" ></i>
+      <span class="text-uppercase">Nuestros</span>
+      <br>
+      <span class="text-uppercase">Productos</span>
+      <br>
+      <span class="text-dark">Comprar</span>
   </div>
+  <div style="color: #429E14">
+      <i class="fa-solid fa-truck" style="font-size:20px;"></i><span class="text-uppercase">Enviamos tu compra</span>
+      <br>
+      <span class="text-dark">Córdoba y alrededores</span>
+  </div>
+  <div style="color: #429E14">
+      <i class="fa-brands fa-whatsapp" style="font-size:20px;"></i><span class="text-uppercase">¿Alguna Duda? ¡Contactanos!</span>
+      <br>
+      <span class="text-dark">(0356) 287-3020</span>
+  </div>
+</div>
+
+
 {%endblock%}

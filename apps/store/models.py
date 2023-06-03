@@ -1,6 +1,7 @@
 from django.db import models
 from apps.helper.utilities import pkgen
 from apps.account.models import Account
+from datetime import date
 
 class Category(models.Model):
     id_category = models.CharField(max_length=8, primary_key=True, default=pkgen)
@@ -32,6 +33,7 @@ class Product(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     is_offer = models.BooleanField(default=False)
     percent_offer = models.IntegerField(default= 0)
+    offer_end_date = models.DateField(blank=True, null=True)
 
     class Meta:
         ordering = ('-created_at',)
@@ -45,15 +47,26 @@ class Product(models.Model):
     def price_total(self):
         result = self.price_product - (self.price_product * self.percent_offer) / 100
         return result
+    
+    @property
+    def calc_offer_date(self):
+        today_now = date.today()
+        date_offer = self.offer_end_date
+        if self.offer_end_date:
+            if date_offer >= today_now:
+                return True
+            else:
+                return False
+
 
 class Order(models.Model):
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
-    receiver = models.CharField(max_length=255, blank=True, null=True)
+    receiver = models.CharField(max_length=255, blank=True, null=True, default="")
     receiver_address = models.CharField(max_length=255, blank=True, null=True)
     address = models.CharField(max_length=255)
-    zip_code = models.CharField(max_length=255)
-    city = models.CharField(max_length=255)
+    shipping_address = models.CharField(max_length=255, null=True, blank=True)
+    shipping_name = models.CharField(max_length=255, null=True, blank=True)
     total_cost = models.DecimalField(max_digits=12, decimal_places=2, default=0)
     paid_amount = models.DecimalField(max_digits=12, decimal_places=2, blank=True, null=True)
     is_paid = models.BooleanField(default=False)

@@ -13,6 +13,7 @@
     
     <div class="row p-3 pb-2 pt-3">
         {% for product in page_obj.object_list %}
+        {% if product.calc_offer_date %}
             <div class="card col-xs-12 col-md-6 col-lg-3" style="width: 18rem; margin: 10px; border-radius: 30px;">
                 <a href="{% url 'product_detail' product.category.slug product.slug %}" style="text-decoration:none; color: #000000; opacity:0.87;"><img src="{{ product.image_product.url }}" class="card-img-top" style="width: 250px; height: 200px;"></a>
                 <div class="card-body">
@@ -20,13 +21,17 @@
                         <h5 class="card-title"> <a href="{% url 'product_detail' product.category.slug product.slug %}" style="text-decoration:none; color: #000000; opacity:0.87;">{{ product.name_product }}</a></h5>
                     </div>
                     <muted class="card-text text-decoration-line-through pe-4" >{{ product.price_product}}</muted> <strong>{{ product.price_total }}</strong>
+                    <p class="card-text">Con un {{product.percent_offer}} % de descuento</p>
                     <p class="card-text">{{ product.description_product}}</p>                                 
                 </div>             
                 <div class="card-footer text-end" style="background-color:white;">
-                    <a href="{% url 'add_to_cart' product.id_product 1 %}" class="btn btn-primary rounded call-to-action btn-main-menu"> Agregar al carrito</a>
+                    <a href="{% url 'add_to_cart' product.id_product 1 %}" class="btn call-to-action btn-main-menu"> Agregar al carrito</a>
                 </div>
             </div>
-        {% endfor %}
+     
+        {% endif %}
+    {% endfor %}
+            
     </div>
 </div>
 <center>

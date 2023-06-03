@@ -1,12 +1,54 @@
 {% extends 'core/base.html' %}
-
+{% load static %}
 {% block title %} Info {% endblock %}
 
 {% block content%}
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="/">Home</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Info</li>
+      <li class="breadcrumb-item active" aria-current="page">Donde Estamos</li>
     </ol>
 </nav>
+
+<div class="container-fluid homepage">
+  <div
+  class="bg-image"
+  style="
+    background-image: url({% static "images/company/MapaCordoba.png" %});
+    height: 845px;
+    width: 1446px;
+    border-radius: 15px;
+  ">
+  <br>
+  <div class="card cuadro-info">
+    <div class="card-header">
+      <p class="pt-4 text-center card-title" style="color:#429e14;">PUNTOS DE VENTAS</p>
+      <p class="text-center card-text">Usar mi Ubicacion<p>
+      <p class="text-center card-text pt-4">Córdoba<p>
+        <p class="text-center card-text pt-4" style="color:#429e14;"><strong>Encuentranos</strong><p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item pt-4">
+        <p class="card-text"><strong>Mercado Norte</strong></p>
+        <p class="card-text pt-3">Oncativo 50,</p>
+        <p class="card-text">Córdoba.</p>
+        <p class="card-text pt-3">(0351) 434-2241</p>
+      </li>
+      <li class="list-group-item pt-4">
+        <p class="card-text"><strong>El Granero dietética</strong></p>
+        <p class="card-text pt-3">Bv. Los Granaderos 2347,</p>
+        <p class="card-text">Córdoba.</p>
+        <p class="card-text pt-3">(0351) 434-2241</p>
+      </li>
+      <li class="list-group-item pt-4">
+        <p class="card-text"><strong>Mercado Norte</strong></p>
+        <p class="card-text pt-3">Oncativo 50,</p>
+        <p class="card-text">Córdoba.</p>
+        <p class="card-text pt-3">(0351) 434-2241</p>
+      </li>
+      <li class="list-group-item"></li>
+    </ul>
+  </div>
+  </div>
+</div>
 {%endblock%}

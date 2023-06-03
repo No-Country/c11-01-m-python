@@ -25,7 +25,7 @@
                     <p class="card-text">{{ product.description_product}}</p>                                 
                 </div>             
                 <div class="card-footer text-end" style="background-color:white;">
-                    <a href=href="{% url 'add_to_cart' product.id_product 1 %}" class="btn call-to-action rounded"> Agregar al carrito</a>
+                    <a href=href="{% url 'add_to_cart' product.id_product 1 %}" class="btn call-to-action"> Agregar al carrito</a>
                 </div>
             </div>
         {% endfor %}

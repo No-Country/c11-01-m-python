@@ -1,7 +1,7 @@
 body {
     width: 100%;
     background-color: #f8f9fa;
-    font-family: montserrat;
+    font-family: Montserrat;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -13,6 +13,13 @@ html, body {
     overflow-x: hidden;
 }
 
+/*a link en general*/
+a:link, a:visited, a:active {
+    text-decoration:none;
+    color: black;
+    opacity: 0.87;
+}
+
 /* Inico del nav personalizado*/
 
 /*Para mantener el patron del primer navbar, si se hace un cambio
@@ -21,12 +28,12 @@ en el background color de .primer-navbar, debe hacerse en el custom por igual */
 #68ad02
 #fdcf81 Favorito*/
 .fondo-header{
-    background-color: #fdcf81;
+    background-color: #ffffff;
     width: 100%;
 }
 
 .navbar-custom{
-    background-color: #fdcf81;
+    background-color: #ffffff;
 }
 
 .navbar-secundario{
@@ -44,53 +51,48 @@ en el background color de .primer-navbar, debe hacerse en el custom por igual */
     opacity: 0.87;
   }
 
-.navbar-light .navbar-nav .nav-link:focus,
-.navbar-light .navbar-nav .nav-link:hover {
-  color: #2e755c;
+.navbar-nav a{
+    font-size: 14px;
+    font-weight: bold;
+    color: #429e14;
 }
 
 /*Fin del nav personalizado*/
 
 /*Search Box*/
-.search-bar{
-    width: 100%;
-    max-width: 600px;
-    min-width: 200px;
-    max-height: 50px;
-    background: #fae1b5;
-    display:flex;
-    align-items: center;
-    border-radius: 60px;
-    padding: 10px 20px;
-    margin-left: 12%;
-    margin-right: 3%;
-}
-
-.search-bar input{
-    background: transparent;
-    flex: 1;
-    border: 0;
-    max-height: 50px;
-    outline: none;
-    padding: 24px 20px;
-    font-size: 20;
-    color: #000000;
-    opacity: 0.87;
-}
-
-.search-bar button img{
-    width: 25px;
-}
-
-.search-bar button {
-    border: 0;
-    border-radius: 50%;
-    max-height: 50px;
-    width: 60px;
-    height: 60px;
-    background: #fae1b5;
+/* Style the search field */
+form.search-form input[type=search] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 90%;
+    background: #f1f1f1;
+    margin-bottom: 15px;
+    border-radius: 30px 0px 0px 30px
+  }
+  
+  /* Style the submit button */
+  form.search-form button {
+    float: left;
+    padding: 10px;
+    width: 10%;
+    background: #429e14;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none; /* Prevent double borders */
     cursor: pointer;
-}
+    border-radius: 0px 30px 30px 0px
+  }
+
+  
+  /* Clear floats */
+  form.search-form::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
 /*Fin del Search box*/
 
 /*Texto de la base page*/
@@ -114,12 +116,21 @@ h1 {
 
 /*Footer  Color: #fdcf81*/
 footer {
-    background-color: #fdcf81;
+    background-color: #2D977E;
     margin-top: auto;
     padding-top: 15px;
+    font-size: 12px
 }
-footer a {
-    font-size: 12px; 
+footer ul{
+    font-size: 12px;
+    text-align: left;
+    margin-left:5%;
+    color:white;
+    font-size: 12px;
+}
+
+footer li {
+    color: white;
 }
 .footer-class {
     max-height: 200px;
@@ -165,19 +176,15 @@ footer a {
 
 /* Call to actions y botones */
 
-a:link, a:visited, a:active {
-    text-decoration:none;
-    color: black;
-    opacity: 0.87;
-}
-
 .call-to-action {
-    background-color: #016944;
-    color:white;   
+    background-color: #9eb021;
+    color:white;  
+    border-radius: 15px 
 }
 .call-to-action:hover{
-    background-color: #F08F20;
+    background-color: #E9961E;
     color:white;
+    border-radius: 15px 
 }
 /* Fin de Call to Actions y botones */
 
@@ -196,3 +203,39 @@ a:link, a:visited, a:active {
     padding: 0;
 }
 /*Fin del homepage*/
+
+.no-gutter > [class*='col-']{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/*cuadrado amarillo interno*/
+.cuadro-about {
+    background-color: #FEC430;
+    width: 420px;
+    height: 627px;
+    margin-left: 70%;
+    border-radius: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .cuadro-about {
+        background-color: #FEC430;
+        width: 420px;
+        height: 627px;
+        margin-left: 0%;
+        border-radius: 15px;
+    }
+  }
+
+
+/*cuadro blanco de info*/
+.cuadro-info{
+    background-color:white;
+    width: 352px;
+    height: 750px;
+    border-radius: 10px;
+    margin-left:5%;
+}
+
