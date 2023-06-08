@@ -90,7 +90,8 @@ Así nuestros clientes pueden acceder a:
 
 <!-- Developers -->
 <table>
- <caption>DEVs</caption>
+ <caption><strong>DEVs</strong></caption>
+ <hr>
   <tr>
     <td>
       <div align="center" width="120">
@@ -111,7 +112,8 @@ Así nuestros clientes pueden acceder a:
 
 <!-- UX/UI -->
 <table>
- <caption>UX/UI Designers</caption>
+ <caption><strong>UX/UI Designers</strong></caption>
+ <hr>
   <tr>
     <td>
       <div align="center" width="120">
@@ -146,7 +148,8 @@ Así nuestros clientes pueden acceder a:
 
 <!-- QA -->
 <table>
- <caption>QA Tester</caption>
+ <caption><strong>QA Testers</strong></caption>
+ <hr>
   <tr>
     <td>
       <div align="center" width="120">
