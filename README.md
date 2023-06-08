@@ -136,7 +136,7 @@ Así nuestros clientes pueden acceder a:
     </td>
     <td>
       <div align="center" width="120">
-        <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/Estefania.png"/>
+        <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/Estef.png"/> 
         <h4 style="margin-top: 10px;">Estefania Parra</h4>
         <p><em>UX/UI Designer</em></p>
       </div>
