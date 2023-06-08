@@ -56,11 +56,11 @@ Así nuestros clientes pueden acceder a:
 
  El E-commerce nace de la necesidad de nuestra marca, Crazy Vegan, de acomodar a nuestros clientes, para que tengan una plataforma digital, donde puedan realizar sus compras, desde cualquier hora y desde cualquier lugar, con envíos a diversas partes de Argentina, ya sea para el consumo de ellos mismos o como regalo para alguien que aprecian y desean mejorar su calidad de vida.
 
-### 📈 ¿Para que fue creado Crazy Vegan E-Commerce?
+### 📈 ¿Para qué fue creado Crazy Vegan E-Commerce?
 
  Crazy Vegan E-Commerce se crea como una herramienta de poder de ventas, que le permite a nuestra compañía alcanzar clientes más allá de las provincias cercanas a Córdoba, y le permite llegar a más provincias de Argentina
 
-### 📋 ¿Cuales problemas resuelve?
+### 📋 ¿Qué problemas resuelve?
 
 * Como herramienta de poder de ventas, aumenta las ventas diarias que tiene la tienda, ya que, los clientes hacen sus pedidos con dirección de envío y de 24 a 48 horas tienen un paquete con los artículos deseados.
 * Comodidad para que los clientes realicen sus compras.
@@ -101,7 +101,7 @@ Así nuestros clientes pueden acceder a:
     </td>
     <td>
       <div align="center" width="120">
-        <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/"/>
+        <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/user.png"/>
         <h4 style="margin-top: 10px;">Brian Juan</h4>
         <p><em>Frontend Developer</em></p>
       </div>
@@ -136,7 +136,7 @@ Así nuestros clientes pueden acceder a:
     </td>
     <td>
       <div align="center" width="120">
-        <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/"/>
+        <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/Estefania.png"/>
         <h4 style="margin-top: 10px;">Estefania Parra</h4>
         <p><em>UX/UI Designer</em></p>
       </div>
@@ -157,8 +157,8 @@ Así nuestros clientes pueden acceder a:
     </td>
     <td>
       <div align="center" width="120">
-        <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/"/>
-        <h4 style="margin-top: 10px;">Yanina Hu</h4>
+        <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/Yanina.png"/>
+        <h4 style="margin-top: 10px;">Yanina Huentemil</h4>
         <p><em>QA Tester</em></p>
       </div>
     </td>
