@@ -20,20 +20,20 @@
   <summary>Índice</summary>
   <ul>
     <li>
-      <a href="#sobre-crazy-vegan">Sobre Crazy Vegan</a>
+      <a href="#-sobre-crazy-vegan">Sobre Crazy Vegan</a>
       <ul>
-        <li><a href="#qué-es-crazy-vegan">¿Qué es Crazy Vegan?</a></li>
+        <li><a href="#-qué-es-crazy-vegan">¿Qué es Crazy Vegan?</a></li>
       </ul>
     </li>
     <li>
-      <a href="#sobre-el-e-commerce">Sobre el E-Commerce</a>
+      <a href="#-sobre-el-e-commerce">Sobre el E-Commerce</a>
       <ul>
-        <li><a href="#para-que-fue-creado-crazy-vegan-e-commerce">¿Para que fue creado Crazy Vegan E-Commerce?</a></li>
-        <li><a href="#cuales-problemas-resuelve">¿Cuáles problemas resuelve?</a></li>
+        <li><a href="#-para-que-fue-creado-crazy-vegan-e-commerce">¿Para que fue creado Crazy Vegan E-Commerce?</a></li>
+        <li><a href="#-cuales-problemas-resuelve">¿Cuáles problemas resuelve?</a></li>
       </ul>
     </li>
-    <li><a href="#tech-stacks">Tech Stacks</a></li>
-    <li><a href="#miembros">Miembros</a></li>
+    <li><a href="#-tech-stacks">Tech Stacks</a></li>
+    <li><a href="#-miembros">Miembros</a></li>
   </ul>
 </details>
 
@@ -80,6 +80,43 @@ Así nuestros clientes pueden acceder a:
 * <img src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Logos/figma-logo.png" alt="Crazy Vegans Logo" width="25" height="25"> Figma
 * <img src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Logos/jira-logo.png" alt="Crazy Vegans Logo" width="25" height="25"> Jira
 * <img src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Logos/trello-logo.png" alt="Crazy Vegans Logo" width="25" height="25"> Trello
-</ul>
+* <img src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Logos/photoshop-logo.png" alt="Crazy Vegans Logo" width="25" height="25"> Photoshop
 
-## 🚂 Miembros
+## ♟️ Miembros
+
+<table>
+ <caption>DEVs</caption>
+  <tr>
+    <td>
+      <div align="center">
+        <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/members/"/>
+        <h4 style="margin-top: 10px;">Enmanuel De La Cruz Metivier</h4>
+        <p><em>Fullstack Developer</em></p>
+      </div>
+    </td>
+    <td>
+      <div align="center">
+        <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/members/"/>
+        <h4 style="margin-top: 10px;">Brian Juan</h4>
+        <p><em>Frontend Developer</em></p>
+      </div>
+    </td>
+  </tr>
+  <caption>UX/UI</caption>
+  <tr>
+    <td>
+      <div align="center">
+        <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/members/"/>
+        <h4 style="margin-top: 10px;">Bianna Santana</h4>
+        <p><em>UX/UI Designer</em></p>
+      </div>
+    </td>
+    <td>
+      <div align="center">
+        <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/members/"/>
+        <h4 style="margin-top: 10px;">Fernanda Baquero</h4>
+        <p><em>UX/UI Designer</em></p>
+      </div>
+    </td>
+  </tr>
+</table>
