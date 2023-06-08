@@ -158,7 +158,7 @@ Así nuestros clientes pueden acceder a:
     <td>
       <div align="center" width="120">
       <a href="https://www.linkedin.com/in/gabriel-llorente/" target="_blank" rel="author">
-        <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/Gabriel.png"/>
+        <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/Gabllorente.png"/>
         <h4 style="margin-top: 10px;">Gabriel Llorente</h4>
         <p><em>QA Tester Manual</em></p>
         </a>
@@ -168,14 +168,14 @@ Así nuestros clientes pueden acceder a:
       <div align="center" width="120">
         <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/Yanina.png"/>
         <h4 style="margin-top: 10px;">Yanina Huentemil</h4>
-        <p><em>QA Tester</em></p>
+        <p><em>QA Tester Manual jr.</em></p>
       </div>
     </td>
     <td>
       <div align="center" width="120">
         <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/user.png"/>
         <h4 style="margin-top: 10px;">Lucas Dipasquale</h4>
-        <p><em>QA Tester Manual</em></p>
+        <p><em>QA Tester Manual jr.</em></p>
       </div>
     </td>
   </tr>
