@@ -39,28 +39,28 @@
 
 <!-- Sobre el Sobre Crazy Vegan -->
 
-## Sobre Crazy Vegan
+## 🌱 Sobre Crazy Vegan
 Crazy Vegan nace de la necesidad de consumir productos veganos, con bajo impacto a nivel medio ambiental, sin causar ningún tipo de sufrimiento o derivado de animal. Solamente utilizando plantas y semillas, para crear deliciosas comidas, dips y acompañantes veganos.
 
 Así nuestros clientes pueden acceder a:
 
-* 🌎 Productos eco friendly.
-* 🌱 Sin derivado de animales.
-* 🏃 Ayudandolos a llevar una vida mas saludable.
+* Productos eco friendly.
+* Sin derivado de animales.
+* Ayudandolos a llevar una vida mas saludable.
 
-### ¿Qué es Crazy Vegan?
+### 🏡 ¿Qué es Crazy Vegan?
 
-🏡 Somos un microemprendimiento dedicado a los alimentos naturales, elaboramos productos alimenticios a base de leches vegetales, sin derivados de origen animal, sin lactosa ni gluten. Nuestros productos nacen en Córdoba, Argentina y llegan a todo el país. Contamos con 5 años de dedicación para que cada uno de los productos se destaque.
+ Somos un microemprendimiento dedicado a los alimentos naturales, elaboramos productos alimenticios a base de leches vegetales, sin derivados de origen animal, sin lactosa ni gluten. Nuestros productos nacen en Córdoba, Argentina y llegan a todo el país. Contamos con 5 años de dedicación para que cada uno de los productos se destaque.
 
-## Sobre el E-Commerce
+## 🛒 Sobre el E-Commerce
 
-🛒 El E-commerce nace de la necedad de nuestra marca, Crazy Vegan, de acomodar a nuestros clientes, para que tengan una plataforma digital, donde puedan realizar sus compras, desde cualquier hora y desde cualquier lugar, con envíos a diversas partes de Argentina, ya sea para el consumo de ellos mismos o como regalo para alguien que aprecian y desean mejorar su calidad de vida.
+ El E-commerce nace de la necedad de nuestra marca, Crazy Vegan, de acomodar a nuestros clientes, para que tengan una plataforma digital, donde puedan realizar sus compras, desde cualquier hora y desde cualquier lugar, con envíos a diversas partes de Argentina, ya sea para el consumo de ellos mismos o como regalo para alguien que aprecian y desean mejorar su calidad de vida.
 
-### ¿Para que fue creado Crazy Vegan E-Commerce?
+### 📈 ¿Para que fue creado Crazy Vegan E-Commerce?
 
-📈 Crazy Vegans E-Commerce se crea como una herramienta de poder de ventas, que le permite a nuestra compañía alcanzar clientes más allá de las provincias cercanas a Córdoba , y le permite llegar a mas provincias de Argentina
+ Crazy Vegans E-Commerce se crea como una herramienta de poder de ventas, que le permite a nuestra compañía alcanzar clientes más allá de las provincias cercanas a Córdoba , y le permite llegar a mas provincias de Argentina
 
-### ¿Cuales problemas resuelve?
+### 📋 ¿Cuales problemas resuelve?
 
 * Como herramienta de poder de ventas, aumenta las ventas diarias que tiene la tienda, ya que, los clientes hacen sus pedidos con dirección de envío y de 24 a 48 horas tienen un paquete con los artículos deseados.
 * Comodidad para que los clientes realicen sus compras.
@@ -69,12 +69,9 @@ Así nuestros clientes pueden acceder a:
 * Da visibilidad en internet a la marca, permitiéndoles crear campañas de SEO y permitiéndoles hacer inversiones en SEM.
 * Permite vender a clientes fuera de los alrededores de Córdoba, Argentina.
 
-## Tech Stack
+## 🔧 Tech Stacks
 
-<ul>
-<li>
-<img src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Logos/django-logo.png" alt="Django logo" width="25" height="25"> Django
-</li>
+* <img src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Logos/django-logo.png" alt="Django logo" width="25" height="25"> Django
 * <img src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Logos/python-logo.png" alt="Python logo" width="25" height="25"> Python
 * <img src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Logos/mysql-logo.png" alt="mysql Logo" width="25" height="25"> MySQL
 * <img src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Logos/html-logo.png" alt="html Logo" width="25" height="25"> HTML5
@@ -84,4 +81,5 @@ Así nuestros clientes pueden acceder a:
 * <img src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Logos/jira-logo.png" alt="Crazy Vegans Logo" width="25" height="25"> Jira
 * <img src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Logos/trello-logo.png" alt="Crazy Vegans Logo" width="25" height="25"> Trello
 </ul>
-## Miembros
+
+## 🚂 Miembros
