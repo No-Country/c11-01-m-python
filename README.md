@@ -95,13 +95,15 @@ Así nuestros clientes pueden acceder a:
   <tr>
     <td>
       <div align="center" width="120">
+      <a href="https://www.linkedin.com/in/enmanuel-de-la-cruz-met/" target="_blank" rel="author">
         <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/Enmanuel.png"/>
         <h4 style="margin-top: 10px;">Enmanuel De La Cruz</h4>
         <p><em>Fullstack Developer</em></p>
+      </a>
       </div>
     </td>
     <td>
-      <div align="center" width="120">
+      <div align="center" width="120">      
         <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/user.png"/>
         <h4 style="margin-top: 10px;">Brian Juan</h4>
         <p><em>Frontend Developer</em></p>
@@ -117,9 +119,11 @@ Así nuestros clientes pueden acceder a:
   <tr>
     <td>
       <div align="center" width="120">
+      <a href="https://www.linkedin.com/in/bianna-encarnaci%C3%B3n/" target="_blank" rel="author">
         <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/Bianna.png"/>
         <h4 style="margin-top: 10px;">Bianna Santana</h4>
         <p><em>UX/UI Designer</em></p>
+        </a>
       </div>
     </td>
     <td>
@@ -153,9 +157,11 @@ Así nuestros clientes pueden acceder a:
   <tr>
     <td>
       <div align="center" width="120">
+      <a href="https://www.linkedin.com/in/gabriel-llorente/" target="_blank" rel="author">
         <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/"/>
         <h4 style="margin-top: 10px;">Gabriel Llorente</h4>
         <p><em>QA Tester</em></p>
+        </a>
       </div>
     </td>
     <td>
@@ -167,9 +173,9 @@ Así nuestros clientes pueden acceder a:
     </td>
     <td>
       <div align="center" width="120">
-        <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/"/>
+        <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/user.png"/>
         <h4 style="margin-top: 10px;">Lucas Dipasquale</h4>
-        <p><em>QA Tester</em></p>
+        <p><em>QA Tester Manual</em></p>
       </div>
     </td>
   </tr>
