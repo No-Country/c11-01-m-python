@@ -119,7 +119,7 @@ Así nuestros clientes pueden acceder a:
   <tr>
     <td>
       <div align="center" width="120">
-      <a href="https://www.linkedin.com/in/bianna-encarnaci%C3%B3n/" target="_blank" rel="author">
+      <a href="https://www.linkedin.com/in/bianna-encarnacion/" target="_blank" rel="author">
         <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/Bianna.png"/>
         <h4 style="margin-top: 10px;">Bianna Santana</h4>
         <p><em>UX/UI Designer</em></p>
@@ -135,9 +135,11 @@ Así nuestros clientes pueden acceder a:
     </td>
     <td>
       <div align="center" width="120">
+      <a href="https://www.linkedin.com/in/ceciliaibanez/" target="_blank" rel="author">
         <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/Cecilia.png"/>
         <h4 style="margin-top: 10px;">Cecilia Ibañez</h4>
         <p><em>UX/UI Designer</em></p>
+        </a>
       </div>
     </td>
     <td>
