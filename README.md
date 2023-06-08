@@ -152,7 +152,7 @@ Así nuestros clientes pueden acceder a:
 
 <!-- QA -->
 <table>
- <caption><strong>QA (quality Assurance)</strong></caption>
+ <caption><strong>QA (Aseguramiento de Calidad)</strong></caption>
  <hr>
   <tr>
     <td>
