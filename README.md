@@ -175,9 +175,11 @@ Así nuestros clientes pueden acceder a:
     </td>
     <td>
       <div align="center" width="120">
+      <a href="https://www.linkedin.com/in/lucasdipasquale" target="_blank" rel="author">
         <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/user.png"/>
         <h4 style="margin-top: 10px;">Lucas Dipasquale</h4>
         <p><em>QA Tester Manual jr.</em></p>
+        </a>
       </div>
     </td>
   </tr>
