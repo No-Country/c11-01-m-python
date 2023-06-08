@@ -17,7 +17,7 @@
 <!-- Índice -->
 
 <details>
-  <summary>Table of Contents</summary>
+  <summary>Índice</summary>
   <ul>
     <li>
       <a href="#sobre-crazy-vegan">Sobre Crazy Vegan</a>
@@ -71,16 +71,17 @@ Así nuestros clientes pueden acceder a:
 
 ## Tech Stack
 
-Las Tecnologías utilizadas en el proyecto fueron:
-
-* <img src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Logos/django-logo.png" alt="Django logo" width="50" height="50"> Django
-* <img src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Logos/python-logo.png" alt="Python logo" width="50" height="50"> Python
-* <img src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Logos/mysql-logo.png" alt="mysql Logo" width="50" height="50"> MySQL
-* <img src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Logos/html-logo.png" alt="html Logo" width="50" height="50"> HTML5
-* <img src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Logos/css3-logo.png" alt="css Logo" width="50" height="50"> CSS3
-* <img src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Logos/bootstrap-logo.png" alt="bootstrap Logo" width="50" height="50"> Bootstrap 5
-* <img src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Logos/figma-logo.png" alt="Crazy Vegans Logo" width="50" height="50"> Figma
-* <img src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Logos/jira-logo.png" alt="Crazy Vegans Logo" width="50" height="50"> Jira
-* <img src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Logos/trello-logo.png" alt="Crazy Vegans Logo" width="50" height="50"> Trello
-
+<ul>
+<li>
+<img src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Logos/django-logo.png" alt="Django logo" width="25" height="25"> Django
+</li>
+* <img src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Logos/python-logo.png" alt="Python logo" width="25" height="25"> Python
+* <img src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Logos/mysql-logo.png" alt="mysql Logo" width="25" height="25"> MySQL
+* <img src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Logos/html-logo.png" alt="html Logo" width="25" height="25"> HTML5
+* <img src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Logos/css3-logo.png" alt="css Logo" width="25" height="25"> CSS3
+* <img src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Logos/bootstrap-logo.png" alt="bootstrap Logo" width="25" height="25"> Bootstrap 5
+* <img src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Logos/figma-logo.png" alt="Crazy Vegans Logo" width="25" height="25"> Figma
+* <img src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Logos/jira-logo.png" alt="Crazy Vegans Logo" width="25" height="25"> Jira
+* <img src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Logos/trello-logo.png" alt="Crazy Vegans Logo" width="25" height="25"> Trello
+</ul>
 ## Miembros
