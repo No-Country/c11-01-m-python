@@ -152,7 +152,7 @@ Así nuestros clientes pueden acceder a:
 
 <!-- QA -->
 <table>
- <caption><strong>QA Testers</strong></caption>
+ <caption><strong>QA (quality Assurance)</strong></caption>
  <hr>
   <tr>
     <td>
@@ -160,7 +160,7 @@ Así nuestros clientes pueden acceder a:
       <a href="https://www.linkedin.com/in/gabriel-llorente/" target="_blank" rel="author">
         <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/Gabriel.png"/>
         <h4 style="margin-top: 10px;">Gabriel Llorente</h4>
-        <p><em>QA Tester</em></p>
+        <p><em>QA Tester Manual</em></p>
         </a>
       </div>
     </td>
