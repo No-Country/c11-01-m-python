@@ -69,6 +69,8 @@ Así nuestros clientes pueden acceder a:
 * Da visibilidad en internet a la marca, permitiéndoles crear campañas de SEO y permitiéndoles hacer inversiones en SEM.
 * Permite vender a clientes fuera de los alrededores de Córdoba, Argentina.
 
+<!-- Tecnologias -->
+
 ## 🔧 Tech Stacks
 
 * <img src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Logos/django-logo.png" alt="Django logo" width="25" height="25"> Django
@@ -82,40 +84,89 @@ Así nuestros clientes pueden acceder a:
 * <img src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Logos/trello-logo.png" alt="Crazy Vegans Logo" width="25" height="25"> Trello
 * <img src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Logos/photoshop-logo.png" alt="Crazy Vegans Logo" width="25" height="25"> Photoshop
 
+<!-- Miembros del equipo -->
+
 ## ♟️ Miembros
 
+<!-- Developers -->
 <table>
  <caption>DEVs</caption>
   <tr>
     <td>
       <div align="center">
-        <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/members/"/>
+        <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/Enmanuel.png"/>
         <h4 style="margin-top: 10px;">Enmanuel De La Cruz Metivier</h4>
         <p><em>Fullstack Developer</em></p>
       </div>
     </td>
     <td>
       <div align="center">
-        <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/members/"/>
+        <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/"/>
         <h4 style="margin-top: 10px;">Brian Juan</h4>
         <p><em>Frontend Developer</em></p>
       </div>
     </td>
   </tr>
-  <caption>UX/UI</caption>
+</table>
+
+<!-- UX/UI -->
+<table>
+ <caption>UX/UI Designers</caption>
   <tr>
     <td>
       <div align="center">
-        <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/members/"/>
+        <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/Bianna.png"/>
         <h4 style="margin-top: 10px;">Bianna Santana</h4>
         <p><em>UX/UI Designer</em></p>
       </div>
     </td>
     <td>
       <div align="center">
-        <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/members/"/>
+        <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/Fernanda.png"/>
         <h4 style="margin-top: 10px;">Fernanda Baquero</h4>
         <p><em>UX/UI Designer</em></p>
+      </div>
+    </td>
+    <td>
+      <div align="center">
+        <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/"/>
+        <h4 style="margin-top: 10px;">Cecilia Ibañez</h4>
+        <p><em>UX/UI Designer</em></p>
+      </div>
+    </td>
+    <td>
+      <div align="center">
+        <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/"/>
+        <h4 style="margin-top: 10px;">Estefania Parra</h4>
+        <p><em>UX/UI Designer</em></p>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<!-- QA -->
+<table>
+ <caption>QA Tester</caption>
+  <tr>
+    <td>
+      <div align="center">
+        <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/"/>
+        <h4 style="margin-top: 10px;">Gabriel Llorente</h4>
+        <p><em>QA Tester</em></p>
+      </div>
+    </td>
+    <td>
+      <div align="center">
+        <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/"/>
+        <h4 style="margin-top: 10px;">Yanina Hu</h4>
+        <p><em>QA Tester</em></p>
+      </div>
+    </td>
+    <td>
+      <div align="center">
+        <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/"/>
+        <h4 style="margin-top: 10px;">Lucas Dipasquale</h4>
+        <p><em>QA Tester</em></p>
       </div>
     </td>
   </tr>
