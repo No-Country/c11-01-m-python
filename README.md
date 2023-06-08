@@ -54,11 +54,11 @@ Así nuestros clientes pueden acceder a:
 
 ## 🛒 Sobre el E-Commerce
 
- El E-commerce nace de la necedad de nuestra marca, Crazy Vegan, de acomodar a nuestros clientes, para que tengan una plataforma digital, donde puedan realizar sus compras, desde cualquier hora y desde cualquier lugar, con envíos a diversas partes de Argentina, ya sea para el consumo de ellos mismos o como regalo para alguien que aprecian y desean mejorar su calidad de vida.
+ El E-commerce nace de la necesidad de nuestra marca, Crazy Vegan, de acomodar a nuestros clientes, para que tengan una plataforma digital, donde puedan realizar sus compras, desde cualquier hora y desde cualquier lugar, con envíos a diversas partes de Argentina, ya sea para el consumo de ellos mismos o como regalo para alguien que aprecian y desean mejorar su calidad de vida.
 
 ### 📈 ¿Para que fue creado Crazy Vegan E-Commerce?
 
- Crazy Vegans E-Commerce se crea como una herramienta de poder de ventas, que le permite a nuestra compañía alcanzar clientes más allá de las provincias cercanas a Córdoba , y le permite llegar a mas provincias de Argentina
+ Crazy Vegan E-Commerce se crea como una herramienta de poder de ventas, que le permite a nuestra compañía alcanzar clientes más allá de las provincias cercanas a Córdoba, y le permite llegar a más provincias de Argentina
 
 ### 📋 ¿Cuales problemas resuelve?
 
@@ -93,14 +93,14 @@ Así nuestros clientes pueden acceder a:
  <caption>DEVs</caption>
   <tr>
     <td>
-      <div align="center">
+      <div align="center" width="120">
         <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/Enmanuel.png"/>
-        <h4 style="margin-top: 10px;">Enmanuel De La Cruz Metivier</h4>
+        <h4 style="margin-top: 10px;">Enmanuel De La Cruz</h4>
         <p><em>Fullstack Developer</em></p>
       </div>
     </td>
     <td>
-      <div align="center">
+      <div align="center" width="120">
         <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/"/>
         <h4 style="margin-top: 10px;">Brian Juan</h4>
         <p><em>Frontend Developer</em></p>
@@ -114,28 +114,28 @@ Así nuestros clientes pueden acceder a:
  <caption>UX/UI Designers</caption>
   <tr>
     <td>
-      <div align="center">
+      <div align="center" width="120">
         <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/Bianna.png"/>
         <h4 style="margin-top: 10px;">Bianna Santana</h4>
         <p><em>UX/UI Designer</em></p>
       </div>
     </td>
     <td>
-      <div align="center">
+      <div align="center" width="120">
         <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/Fernanda.png"/>
         <h4 style="margin-top: 10px;">Fernanda Baquero</h4>
         <p><em>UX/UI Designer</em></p>
       </div>
     </td>
     <td>
-      <div align="center">
-        <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/"/>
+      <div align="center" width="120">
+        <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/Cecilia.png"/>
         <h4 style="margin-top: 10px;">Cecilia Ibañez</h4>
         <p><em>UX/UI Designer</em></p>
       </div>
     </td>
     <td>
-      <div align="center">
+      <div align="center" width="120">
         <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/"/>
         <h4 style="margin-top: 10px;">Estefania Parra</h4>
         <p><em>UX/UI Designer</em></p>
@@ -149,21 +149,21 @@ Así nuestros clientes pueden acceder a:
  <caption>QA Tester</caption>
   <tr>
     <td>
-      <div align="center">
+      <div align="center" width="120">
         <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/"/>
         <h4 style="margin-top: 10px;">Gabriel Llorente</h4>
         <p><em>QA Tester</em></p>
       </div>
     </td>
     <td>
-      <div align="center">
+      <div align="center" width="120">
         <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/"/>
         <h4 style="margin-top: 10px;">Yanina Hu</h4>
         <p><em>QA Tester</em></p>
       </div>
     </td>
     <td>
-      <div align="center">
+      <div align="center" width="120">
         <img width="110" src="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/GitImg/Members/"/>
         <h4 style="margin-top: 10px;">Lucas Dipasquale</h4>
         <p><em>QA Tester</em></p>
