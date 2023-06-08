@@ -3,6 +3,14 @@
 
 {%block title%} Products {%endblock%}
 {% block content%}
+<style>
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+</style>
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item"><a href="/">Home</a></li>
@@ -17,17 +25,21 @@
     <div class="row p-3 pb-2 pt-3">
         {% if page_obj.object_list %}
             {% for product in page_obj.object_list %}
-                <div class="card col-xs-12 col-md-6 col-lg-3" style="width: 18rem; margin: 10px; border-radius: 30px;">
-                    <a href="{% url 'product_detail' product.category.slug product.slug %}" style="text-decoration:none; color: #000000; opacity:0.87;"><img src="{{ product.image_product.url }}" class="card-img-top" style="width: 250px; height: 200px;"></a>
-                    <div class="card-body">
+                <div class="card col-xs-12 col-md-6 col-lg-3" style="width: 18rem; margin: 10px; border-radius: 20px;">
+                    <div class="container d-flex align-items-center justify-content-center pt-4" style="width: 200px; height: 120px;">
+                        <a href="{% url 'product_detail' product.category.slug product.slug %}" style="text-decoration:none; color: #000000; opacity:0.87;"><img src="{{ product.image_product.url }}" class="rounded mx-auto d-block" style="width: 100%; max-width:195px; max-height:115px"></a>
+                    </div>
+                    <div class="card-body mt-4">
                         <div style="display: flex; flex-direction: row">
                             <h5 class="card-title"> <a href="{% url 'product_detail' product.category.slug product.slug %}" style="text-decoration:none; color: #000000; opacity:0.87;">{{ product.name_product }}</a></h5>
                         </div>
-                        <strong class="card-text">{{ product.price_product}}</strong>
-                        <p class="card-text">{{ product.description_product}}</p>                                 
+                        <div class="pt-1">
+                            <strong class="card-text">$ {{ product.price_product}}</strong>
+                            <p class="card-text">{{ product.description_product}}</p>                                 
+                        </div>    
                     </div>             
-                    <div class="card-footer text-end" style="background-color:white;">
-                        <a href=href="{% url 'add_to_cart' product.id_product 1 %}" class="btn call-to-action btn-main-menu"> Agregar al carrito</a>
+                    <div class="card-footer text-end pt-3" style="background-color:white;">
+                        <a href="{% url 'add_to_cart' product.id_product 1 %}" class="btn call-to-action btn-main-menu text-white"> Agregar al carrito</a>
                     </div>
                 </div>
             {% endfor %}

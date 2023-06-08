@@ -53,3 +53,15 @@ def about(request):
 
 def info(request):
     return render(request, 'core/info.html')
+
+def error_400(request, exception):
+    return render(request, 'core/400.html')
+
+def error_403(request, exception):
+    return render(request, 'core/403.html')
+
+def error_404(request, exception):
+    return render(request, 'core/404.html')
+
+def error_505(request, exception):
+    return render(request, 'core/500.html')

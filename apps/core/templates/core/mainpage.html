@@ -15,7 +15,7 @@
               <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
               <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
             </div>
-          
+
             <!-- The slideshow/carousel -->
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -28,7 +28,7 @@
                 <img src="{% static "images/company/HomeTop3.jpg" %}" alt="Producto 3" class="d-block w-100">
               </div>
             </div>
-          
+
             <!-- Left and right controls/icons -->
             <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
               <i class="fa-sharp fa-solid fa-circle-chevron-left" style="color: #ffffff; font-size:35px;"></i>
@@ -42,45 +42,53 @@
         <div class="d-flex justify-content-around pt-4">
             <div class="p-2">
                 <p class="text-center"><i class="fa-regular fa-credit-card" style="color: #429e14; font-size: 25px;"></i></p>
-                <p class="text-center"><strong>Pagá con todas las tarjetas</strong></p>
-                <p class="text-center">Tus pagos seguros. Es rápido y facil</p>
+                <p class="text-center"><strong>Paga con todas las tarjetas</strong></p>
+                <p class="text-center">Tus pagos seguros. Es rápido y fácil</p>
             </div>
             <div class="p-2">
                 <p class="text-center"><i class="fa-solid fa-truck" style="color: #429e14; font-size: 25px;"></i></p>
                 <p class="text-center"><strong>Enviamos a todo el país</strong></p>
-                <p class="text-center">Envio gratis a partir de $6000</p>
+                <p class="text-center">Enviá gratis a partir de $6000</p>
             </div>
             <div class="p-2">
                 <p class="text-center"><i class="fa-regular fa-phone" style="color: #429e14; font-size: 25px;"></i></p>
                 <p class="text-center"><strong>¿Necesitas Ayuda?</strong></p>
-                <p class="text-center">Servicio de atención al cliente 111 111 111</p>
+                <p class="text-center">Servicio de atención al cliente (54)3516461335</p>
                 <p class="text-center">De lunes a viernes 9:00 - 17:30</p>
             </div>
         </div>
     </div>
-    
+
     <!--Mid-->
     <div class="row">
         <div class="d-flex justify-content-around pt-4">
+          <a href="/product" style="opacity: 1">
             <div class="p-1">
-                <img src="{% static "images/company/MidLeft.png" %}" class="rounded">
+                <img src="{% static "images/company/MidLeft.png" %}" class="img-responsive rounded">
             </div>
-            <div class="p-1">
-                <img src="{% static "images/company/MidRight.png" %}" class="rounded">
-            </div>
+          </a>
+            <a href="/offer">
+              <div class="p-1" style="opacity: 1">
+                  <img src="{% static "images/company/MidRight.png" %}" class="img-responsive rounded">
+              </div>
+            </a>
         </div>
     </div>
 
     <!--BOT-->
-    <div class="row pt-4">       
+    <a href="/product" style="opacity: 1">
+      <div class="row" class="pt-4">
         <img src="{% static "images/company/MidConoce.png" %}" class="img-responsive rounded">
-    </div>
+      </div>
+    </a>
 
-    <div class="row pt-4 pb-2">  
-        <div class="d-flex justify-content-around pt-4">     
+    <a href="/about" style="opacity: 1">
+    <div class="row pt-2 pb-2">
+        <div class="d-flex justify-content-around pt-4">
         <img src="{% static "images/company/BotQuienesSomos.png" %}" class="img-responsive rounded" style="width:80%">
         </div>
     </div>
+    <a>
 
 
 </div>

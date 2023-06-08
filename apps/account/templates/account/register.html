@@ -8,18 +8,13 @@
     <li class="breadcrumb-item active" aria-current="page">Registro</li>
   </ol>
 </nav>
-  <div class="container" style="padding-left: 25%">
+  <div class="container card cascading-right" style="max-width: 650px; background: hsla(0, 0%, 100%, 0.55); backdrop-filter: blur(30px);">
     <div class="row g-0 align-items-center">
-      <div class="col-lg-6 mb-5 mb-lg-0">
-        <div class="card cascading-right" style="
-            background: hsla(0, 0%, 100%, 0.55);
-            backdrop-filter: blur(30px);
-            ">
-            <div class="d-flex flex-column pb-3">
+      <div class="col-lg-6 mb-5 mb-lg-0" style="margin-left:25%">
 				<img class="img-fluid mx-auto d-block pt-3" src="{% static 'images/company/provisional_logo.png' %}" alt="Crazy Vegans Logo" width="150" height="75">
 				</div>
           <div class="card-body p-3 pt-0 shadow-5 text-center">
-            <h2 class="fw-bold mb-5">Registrate</h2>
+            <h2 class="fw-bold mb-5">Regístrate</h2>
             <form class="form-signin" method="post" name="registerForm">{% csrf_token %}
               <!-- 2 column grid layout with text inputs for the first and last names -->
               <div class="row">
@@ -44,27 +39,27 @@
 
               <!-- Email -->
               <div class="form-outline mb-4">
-                <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Correo Electronico" required autofocus>
+                <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Correo Electrónico" required autofocus>
               </div>
 
               <!--Telefono-->
               <div class="form-outline mb-4">
-                <input type="text" name="phone" id="inputdirection" class="form-control" placeholder="Telefono" required>
+                <input type="text" name="phone" id="inputdirection" class="form-control" placeholder="Teléfono" required>
               </div>
 
               <!-- Direccion -->
               <div class="form-outline mb-4">
-                <input type="text" name="direction" id="inputdirection" class="form-control" placeholder="Direccion" required>
+                <input type="text" name="direction" id="inputdirection" class="form-control" placeholder="Dirección" required>
               </div>
 
               <!-- Password -->
               <div class="form-outline mb-4">
-                <input type="password" name="password1" id="inputPassword1" class="form-control" placeholder="Password. 8 dig. 1 may. 1 min. 1 caracter especial" required onfocusout="validatePassword()">
+                <input type="password" name="password1" id="inputPassword1" class="form-control" placeholder="Contraseña. 8 dig. 1 may. 1 min. 1 caracter especial" required onfocusout="validatePassword()">
               </div>
 
               <!-- Confirmacion -->
               <div class="form-outline mb-4">
-                <input type="password" name="password2" id="inputPassword2" class="form-control" placeholder="Confirmar Password..." required>
+                <input type="password" name="password2" id="inputPassword2" class="form-control" placeholder="Confirmar Contraseña..." required>
               </div>
 
                 {% for field in registration_form %}
@@ -81,7 +76,7 @@
 
                 {% endif %}
               <!-- Submit button -->
-              <button class="btn call-to-action btn-users" type="submit" style="width: 100%">Register</button>
+              <button class="btn call-to-action btn-users" type="submit" style="width: 100%">Registro</button>
               <!-- Register buttons -->
             </form>
           </div>
@@ -96,7 +91,7 @@ document.getElementById("inputPassword1").addEventListener("blur", function()
    //Test the value of the input field and whether it matches the regular expression,     where val is the value extracted from the field
   if(!this.value.match(/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/))
   {
-    alert("Error: El password debe tener, 8 digitos, 1 Miniscula, 1 Mayuscula y 1 Caracter especial(@, *, #, %, &)");
+    alert("Error: La Contraseña debe tener, 8 dígitos, 1 Minúscula, 1 Mayúscula y 1 Carácter especial(@, *, #, %, &)");
   }
 }, false)
 </script>

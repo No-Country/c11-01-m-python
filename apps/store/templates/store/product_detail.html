@@ -27,17 +27,15 @@
                             </div>
                             <div class="mt-4 mb-3"> <span class="text-uppercase text-muted brand">{{ product.name_category }}</span>
                                 <h5 class="text-uppercase">{{product.name_product}}</h5>
-                                <div class="price d-flex flex-row align-items-center"> <span class="act-price">${{ product.price_product }}</span>
+                                <div class="price d-flex flex-row align-items-center"> <span class="act-price">$ {{ product.price_product }}</span>
                                 </div>
                             </div>
                             <p class="about">{{ product.description_product }}</p>
-
-
                             <div class="w-50" style="margin:13px;">
                                 <h6 class="text-muted row">Cantidad (Maximo10)</h6>
                                 <form action ="{% url 'add_quantity' product.id_product %}" class = "row" method="get">                        
                                     <input type="number" placeholder="Cantidad" name="query" id="value" class="form-control" min="1" max="10" value="1">
-                                    <button type="submit" class="btn call-to-action btn-main-menu">Agregar </button>
+                                    <button type="submit" class="btn call-to-action btn-main-menu text-white">Agregar al carrito</button>
                                 </form>
                                 
                             </div>

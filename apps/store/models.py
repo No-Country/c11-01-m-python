@@ -78,11 +78,16 @@ class Order(models.Model):
 
     class Meta:
         ordering = ('-created_at',)
+        verbose_name= 'Orden'
+        verbose_name_plural = 'Ordenes'
 
     def get_total_price(self):
         if self.paid_amount:
             return self.paid_amount
         return 0
+    
+    def __str__(self):
+        return f'Orden: {self.id}'
 
 class OrderItem(models.Model):
     order = models.ForeignKey(Order, related_name='items', on_delete=models.CASCADE)
@@ -90,5 +95,12 @@ class OrderItem(models.Model):
     price = models.DecimalField(max_digits=12, decimal_places=2)
     quantity = models.IntegerField(default=1)
 
+    class Meta:
+        verbose_name= 'Articulo Orden'
+        verbose_name_plural = 'Articulos de la Orden'
+
     def get_total_price(self):
         return self.price
+    
+    def __str__(self):
+        return f'{self.order}'

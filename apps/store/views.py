@@ -29,6 +29,11 @@ def remove_from_cart(request, product_id):
     cart.remove(str(product_id))
     return redirect(request.META.get('HTTP_REFERER', 'redirect_if_referer_not_found'))
 
+def clear_cart(request):
+    cart = Cart(request)
+    cart.clear()
+    return redirect(request.META.get('HTTP_REFERER', 'redirect_if_referer_not_found'))
+
 def change_quantity(request, product_id):
     action = request.GET.get('action', '')
     if action:
@@ -92,7 +97,7 @@ def checkout(request):
 #fin del carrito
 def category_detail(request, slug):
     category = get_object_or_404(Category, slug = slug)
-    products = category.products.all().order_by('-created_at')
+    products = category.products.all().order_by('-created_at').filter(is_offer = False)
 
     p = Paginator(products, 9)
     
@@ -117,7 +122,11 @@ def product_detail(request, category_slug, slug):
 
 def search(request):
     query = request.GET.get('query', '')
-    products = Product.objects.filter(name_product__icontains=query)
+
+    if query == "":
+        return redirect(request.META.get('HTTP_REFERER', 'redirect_if_referer_not_found'))
+    
+    products = Product.objects.filter(name_product__icontains=query).filter(is_offer = False)
     
     p = Paginator(products, 9)
     

@@ -99,11 +99,10 @@ def account_view(request, *args, **kwargs):
 		return redirect('/account/login')
 	
 	#Miramos las ordenes que tiene dicho usuario
-	orders = Order.objects.filter(created_by = user_id)[:10]
+	orders = Order.objects.filter(created_by = user_id)
 	return render(request, 'account/account.html', {
 		'account': account,
 		'orders' : orders
 	})
-
 
 	

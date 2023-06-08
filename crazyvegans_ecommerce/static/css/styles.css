@@ -239,3 +239,44 @@ footer li {
     margin-left:5%;
 }
 
+/*carrito*/
+.tarjeta {
+    /* Añadimos sombra */
+    background-color: #FFFFFF;
+    max-width: 100%;
+    height: 90%;
+    border-radius: 15px;
+    margin-bottom: 2%;
+    margin-top: 2%;
+  }
+  
+  /* Sombra por encima*/
+.tarjeta:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.orders-client{
+    border-radius: 15px;
+    margin-bottom: 1%;
+}
+
+.orders-client:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/*Paginacion*/
+center { 
+    margin: 3%;
+    color: #429E14;
+    font-size: 15px;
+}
+
+center li {
+    font-size: 15px;
+    color: #429E14
+}
+
+center i {
+    color: #429E14
+}
+  

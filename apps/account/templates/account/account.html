@@ -10,7 +10,7 @@
             <div class="row">
               <div class="col-md-8">
                 <div class="card-body p-4">
-                  <h3>Informacion general</h3>
+                  <h3>Información general</h3>
                   <hr class="mt-0 mb-4">
                   <div class="row pt-1">
                     <div class="col-6 mb-3">
@@ -18,11 +18,11 @@
                       <strong> {{ account.email }}</strong>
                     </div>
                     <div class="col-6 mb-3">
-                      <h6 class="text-muted">Telefono:</h6>
+                      <h6 class="text-muted">Teléfono:</h6>
                       <strong> {{ account.phone }}</strong>
                     </div>
                     <div class="col-6 mb-3">
-                        <h6 class="text-muted">Direccion:</h6>
+                        <h6 class="text-muted">Dirección:</h6>
                         <strong> {{ account.direction }}</strong>
                     </div>
                     <div class="col-6 mb-3">
@@ -33,30 +33,30 @@
                   <!-- ORDENES -->
                   <h3 data-bs-toggle="collapse" href="#collapseOrders" role="button" aria-expanded="false" aria-controls="collapseExample">
                     Ordenes <i class="fa-regular fa-chevron-down" onclick="ChangeIcon()" id="imgUpDown"></i>
-                    {% comment %} Ordenes <img src="{% static "images/icons/down-arrow.png" %}" width="25" height="25" id="imgUpDown" onclick="changeImage()"> {% endcomment %}
                   </h3>
                   <hr class="mt-0 mb-4">
                   <div class="row pt-1">
                     <div class="col-12 mb-3">                    
                       <div class="collapse" id="collapseOrders">                 
                           {% for order in orders%}
-                          <div class="card card-body">
-                            <div class="row">
-                              <span class ="col">
-                                <span class="text-muted">Codigo:</span><strong>{{order.id}}</strong>
-                              </span>
-                              <span class ="col">
-                                <span class="text-muted">Metodo de pago:</span> <strong>{{ order.paid_method }}</strong>
-                              </span>
-                              <span class ="col">
-                                <span class="text-muted">Total:</span> <strong>${{ order.paid_amount}}</strong>
-                              </span>
-                              <span class ="col">
-                                <span class="text-muted"> Fecha:</span> <strong>${{ order.created_at}}</strong>
-                              </span>
+                          <a href="/store/invoice/{{ order.id }}">
+                            <div class="card card-body orders-client">                         
+                              <div class="row">
+                                <span class ="col">
+                                  <span class="text-muted">Código:</span><strong>{{order.id}}</strong>
+                                </span>
+                                <span class ="col">
+                                  <span class="text-muted">Método de pago:</span> <strong>{{ order.paid_method }}</strong>
+                                </span>
+                                <span class ="col">
+                                  <span class="text-muted">Total:</span> <strong>${{ order.paid_amount}}</strong>
+                                </span>
+                                <span class ="col">
+                                  <span class="text-muted"> Fecha:</span> <strong>{{ order.created_at}}</strong>
+                                </span>
+                              </div>                        
                             </div>
-                            
-                          </div>
+                          </a>
                           {% endfor %}           
                       </div>               
                     </div>

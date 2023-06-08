@@ -5,10 +5,10 @@
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="/">Home</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Login</li>
+    <li class="breadcrumb-item active" aria-current="page">Iniciar sesión</li>
   </ol>
 </nav>
-<div class="container" style="padding-left: 25%">
+<div class="container" style="padding-left: 30%">
     <div class="row g-0 align-items-center">
       <div class="col-lg-6 mb-5 mb-lg-0">
         <div class="card cascading-right" style="
@@ -19,7 +19,7 @@
 				<img class="img-fluid mx-auto d-block pt-3" src="{% static 'images/company/provisional_logo.png' %}" alt="Crazy Vegans Logo" width="150" height="75">
 				</div>
           <div class="card-body p-3 pt-0 shadow-5 text-center">
-            <h2 class="fw-bold mb-5">Login</h2>
+            <h2 class="fw-bold mb-5">Iniciar sesión</h2>
             <form class="form-signin" method="post">{% csrf_token %}
               <!-- 2 column grid layout with text inputs for the first and last names -->
               <div class="row">
@@ -31,7 +31,7 @@
 
               <!-- Password -->
               <div class="form-outline mb-4">
-                <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
               </div>
 
 
@@ -51,10 +51,10 @@
               <!-- Submit button -->
              
             </div>
-            <button class="btn call-to-action btn-users" type="submit" style="width: 100%">Login</button>
+            <button class="btn call-to-action btn-users" type="submit" style="width: 100%">Iniciar sesión</button>
             </form>
             <div class="d-flex flex-column my-4">
-              <span>¿Primera vez aquí? <a class="m-auto text-dark" href="/account/register"> <strong>Registrate</strong></a></span>
+              <span>¿Primera vez aquí? <a class="m-auto text-dark" href="/account/register"> <strong>Regístrate</strong></a></span>
               <a class="m-auto text-dark" href="/account/password_reset"><strong>¿Olvidaste tu contraseña?</strong></a>
               </div>        
             </div>

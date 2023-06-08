@@ -2,6 +2,8 @@
 {% load static %}
 {%block title%} Products {%endblock%}
 {% block content%}
+<div id='printable_div_id'>
+  
 <div class="container mt-6 mb-7">
     <div class="row justify-content-center">
       <div class="col-lg-12 col-xl-7">
@@ -44,12 +46,12 @@
                 <div class="col-md-6 text-md-end">
                   <div class="text-muted mb-2">Pago a</div>
                   <strong>
-                    Crazy Vegans
+                    Crazy Vegan
                   </strong>
                   <p class="fs-sm">
                     Avenida Siempre viva No.5
                     <br>
-                    <a href="#!" class="text-purple">crazyvegans@mail.com
+                    <a href="#!" class="text-purple">crazyvegan@mail.com
                     </a>
                   </p>
                 </div>
@@ -62,7 +64,7 @@
                     </span>
                   </p>
                   <p class="fs-sm">
-                    <strong>Direccion de envio</strong>
+                    <strong>Dirección de envió</strong>
                     <br>
                     <span class="">{{order.shipping_address}}
                     </span>
@@ -74,7 +76,7 @@
             <table class="table border-bottom border-gray-200 mt-3">
               <thead>
                 <tr>
-                  <th scope="col" class="fs-sm text-dark text-uppercase-bold-sm px-0">Descripcion</th>
+                  <th scope="col" class="fs-sm text-dark text-uppercase-bold-sm px-0">Descripción</th>
                   <th scope="col" class="fs-sm text-dark text-uppercase-bold-sm text-end px-0">Monto</th>
                   <th scope="col" class="fs-sm text-dark text-uppercase-bold-sm text-end px-0">Cant.</th>
                 </tr>
@@ -96,7 +98,7 @@
                 <span>{{order.paid_amount}}</span>
               </div>
               <div class="d-flex justify-content-end">
-                <p class="text-muted me-3">Envio</p>
+                <p class="text-muted me-3">Envió</p>
                 <span>$0</span>
               </div>
               <div class="d-flex justify-content-end mt-3">
@@ -105,13 +107,26 @@
               </div>
             </div>
           </div>
-          <div class="d-print-none">
+          <div class="d-print-none non-printable">
             <div class="float-end">
-                <a href="javascript:window.print()" class="btn call-to-action me-1"><i class="fa fa-print"></i></a>
+                <a onClick="printdiv('printable_div_id');" class="btn call-to-action me-1"><i class="fa fa-print"></i></a>
             </div>
         </div>
         </div>
       </div>
     </div>
   </div>
+</div>
+  <script>
+    function printdiv(elem) {
+      var header_str = '<html><head><title>' + document.title  + '</title></head><body>';
+      var footer_str = '</body></html>';
+      var new_str = document.getElementById(elem).innerHTML;
+      var old_str = document.body.innerHTML;
+      document.body.innerHTML = header_str + new_str + footer_str;
+      window.print();
+      document.body.innerHTML = old_str;
+      return false;
+    }
+    </script>
 {% endblock %}

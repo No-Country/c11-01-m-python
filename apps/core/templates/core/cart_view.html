@@ -1,46 +1,65 @@
 {% load static %}
-
-  {% for item in cart %}
-  <div class="row align-items-center border-bottom" style="height:150x; width:450px">
-    <!--Imagen -->
-    <div class="col">
-      <img src="{{ item.product.image_product.url }}" class="" style="width: 75px;">
-    </div>
-    <!--Titulo, Precio y Cantidad-->
-    <div class="col-6">
-      <div class="row">
-        <span class ="col-8">
-          {{ item.product.name_product}}
-        </span>
-        <span class ="col">
-          Cant:
-          <strong>{{ item.quantity }}</strong>
-        </span>
-        <span class ="col">
-          <span class="text-muted">${{ item.product.price_total}}</span>
-        </span>
-      </div>
-    </div>
-    <!-- Botones -->
-    <div class="col">
-      <div class="row" style="margin:3px;">
-        <a class ="col-md-6 col-lg-3 col-xl-3  " href="{% url 'change_quantity' item.product.id_product %}?action=increase">
-          <i class="fa-solid fa-plus m-auto d-block text-info" aria-haspopup="true" aria-expanded="false" style="font-size:15px;"></i>
-        </a>
-        <a class ="col-md-6 col-lg-3 col-xl-3 "  href="{% url 'change_quantity' item.product.id_product %}?action=decrease">
-          <i class="fa-solid fa-minus m-auto d-block text-danger" aria-haspopup="true" aria-expanded="false" style="font-size:15px;"></i>
-        </a>
-      </div>
-    </div>
+<style>
+  
+</style>
+{% if cart %}
+  <div class = "d-flex justify-content-evenly pt-3 border-bottom">
+    <p>Mi Compra</p>
+    <p>|</p>
+    <p><a class ="col-md-6 col-lg-3 col-xl-3 " href="{% url 'clear_cart' %}" style="color: #9EB021">
+      Limpiar el Carrito
+    </a></p>   
   </div>
-  {% endfor %}
-  <div class = "row align-items-center">
-    <div class = "col-8 p-3">
-      <a>Costo total: <strong>{{ cart.get_total_cost  }}</strong></a>
-    </div>
-    <div class = "col pl-5">
-      <a href="/store/checkout/" class="btn call-to-action">Checkout</a>
-    </div>
+  <div style="height:150x; width:450px; background-color: #F7F8F7" class="container">
+    {% for item in cart %}
+      <div class="d-flex align-items-center tarjeta">
+        <!--Imagen -->
+        <div class="col" style="margin-left: 10px;">
+          <img src="{{ item.product.image_product.url }}" class="" style="width: 75px;">
+        </div>
+        <!--Titulo, Precio y Cantidad-->
+        <div class="col-6">
+          <div class="row">
+            <span class ="col-8">
+              {{ item.product.name_product}}
+            </span>
+            <span class ="col">
+              Cant:
+              <strong>{{ item.quantity }}</strong>
+            </span>
+            <span class ="col">
+              <span class="text-muted">${{ item.product.price_total}}</span>
+            </span>
+          </div>
+        </div>
+        <!-- Botones -->
+        <div class="col">
+          <div class="row" style="margin:3px;">
+            <a class ="col-md-6 col-lg-3 col-xl-3  " href="{% url 'change_quantity' item.product.id_product %}?action=increase">
+              <i class="fa-solid fa-plus m-auto d-block" aria-haspopup="true" aria-expanded="false" style="font-size:15px; color:#429E14"></i>
+            </a>
+            <a class ="col-md-6 col-lg-3 col-xl-3 "  href="{% url 'change_quantity' item.product.id_product %}?action=decrease">
+              <i class="fa-solid fa-minus m-auto d-block text-warning" aria-haspopup="true" aria-expanded="false" style="font-size:15px;"></i>
+            </a>
+            <a class ="col-md-6 col-lg-3 col-xl-3 " href="{% url 'remove_from_cart' item.product.id_product %}">
+              <i class="fa-solid fa-trash m-auto d-block text-danger" aria-haspopup="true" aria-expanded="false" style="font-size:15px;"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  
+  <div class = "d-flex justify-content-evenly pt-3 border-top" style="padding-left: 15%">
+    <p>Costo total: </p>
+  </p><strong>{{ cart.get_total_cost  }}</strong></p>
+  </div>   
+  <div class = "d-flex justify-content-center pt-2">
+    <a href="/store/checkout/" class="btn call-to-action text-white" style="width: 80%" >Finalizar Compra</a>
   </div>
   <div>
   </div>
+{% else %}
+  <p style ="margin: 5%">Carrito Vacio</p>
+{% endif %}
+  
