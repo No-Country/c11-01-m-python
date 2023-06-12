@@ -34,6 +34,7 @@
     </li>
     <li><a href="#-tech-stacks">Tech Stacks</a></li>
     <li><a href="#-miembros">Miembros</a></li>
+    <li><a href="#-informe-qa">Informe QA</a></li>
   </ul>
 </details>
 
@@ -184,3 +185,10 @@ Así nuestros clientes pueden acceder a:
     </td>
   </tr>
 </table>
+
+## 🧪 Informe QA
+
+Informes QA.
+
+* <a href="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/InformeQA/Estrategia-Testing.pdf">Informe Final del Cliente</a>
+* <a href="https://raw.githubusercontent.com/No-Country/c11-01-m-python/main/InformeQA/Informe-Final-Cliente.pdf">Informe de Rendimiento</a>
